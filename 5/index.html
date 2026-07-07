@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Corá &amp; Bittencourt — Advocacia de Família e Mediação</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          sage: '#8A9A82',
+          sagedeep: '#6E7D67',
+          putty: '#E7E0D3',
+          puttylite: '#F1EDE4',
+          terra: '#B5583C',
+          terradeep: '#9A4630',
+          ink: '#3A352E',
+        },
+        fontFamily: {
+          serif: ['"Newsreader"', 'Georgia', 'serif'],
+          sans: ['"Nunito Sans"', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .placeholder {
+    background-color: #d8d0bf;
+    background-image: repeating-linear-gradient(135deg, transparent 0 15px, rgba(58,53,46,.06) 15px 16px);
+  }
+  .placeholder-sage {
+    background-color: #9aa791;
+    background-image: repeating-linear-gradient(135deg, transparent 0 15px, rgba(58,53,46,.08) 15px 16px);
+  }
+</style>
+</head>
+<body class="bg-putty text-ink font-sans antialiased">
+
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 bg-putty/92 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-6 h-[76px] flex items-center justify-between">
+      <a href="#topo" class="font-serif text-xl text-ink font-500">Corá <span class="text-terra">&amp;</span> Bittencourt</a>
+      <nav class="hidden md:flex items-center gap-8 text-[14px] font-600 text-ink/70">
+        <a href="#atuacao" class="hover:text-terra transition-colors">Como ajudamos</a>
+        <a href="#sobre" class="hover:text-terra transition-colors">Quem somos</a>
+        <a href="#vozes" class="hover:text-terra transition-colors">Vozes</a>
+        <a href="#contato" class="hover:text-terra transition-colors">Conversar</a>
+      </nav>
+      <a href="#contato" class="hidden md:inline-flex items-center h-10 px-5 rounded-full bg-terra text-puttylite text-[13px] font-700 hover:bg-terradeep transition-colors">Marcar conversa</a>
+      <button id="menuBtn" class="md:hidden text-ink text-2xl leading-none" aria-label="Menu">≡</button>
+    </div>
+    <nav id="mobileNav" class="hidden md:hidden bg-putty px-6 py-4 flex-col gap-3 text-[15px] font-600 text-ink border-t border-ink/10">
+      <a href="#atuacao" class="block py-1">Como ajudamos</a>
+      <a href="#sobre" class="block py-1">Quem somos</a>
+      <a href="#vozes" class="block py-1">Vozes</a>
+      <a href="#contato" class="block py-1">Conversar</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO (colagem assimétrica) ===== -->
+  <section id="topo" class="mx-auto max-w-6xl px-6 pt-14 md:pt-20 pb-20 md:pb-28">
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-6">
+        <p class="inline-block text-[13px] font-700 text-terra bg-terra/10 rounded-full px-4 py-1.5 mb-8">Direito de família &amp; mediação · desde 2011</p>
+        <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] text-ink font-500 mb-7">
+          Direito que cuida de quem está do outro lado da mesa.
+        </h1>
+        <p class="text-ink/70 text-lg leading-relaxed max-w-lg mb-9">
+          Somos duas advogadas que acreditam que a maioria dos conflitos de
+          família termina melhor com um acordo do que com uma sentença — e
+          litigam com firmeza quando o acordo não é possível.
+        </p>
+        <div class="flex flex-wrap items-center gap-5">
+          <a href="#atuacao" class="inline-flex items-center h-11 px-7 rounded-full bg-ink text-puttylite text-[14px] font-700 hover:bg-black transition-colors">Ver como ajudamos</a>
+          <a href="#sobre" class="text-[14px] font-600 text-ink/75 underline decoration-terra decoration-2 underline-offset-4 hover:text-terra transition-colors">Conhecer a dupla</a>
+        </div>
+      </div>
+
+      <!-- colagem: 3 blocos, raios variáveis, desalinhados -->
+      <div class="md:col-span-6 relative h-[380px] md:h-[460px]">
+        <div class="placeholder-sage absolute top-0 right-0 w-[62%] h-[64%] rounded-[36px_36px_36px_4px] flex items-end p-4">
+          <span class="text-[10px] font-600 uppercase tracking-wide text-ink/50">foto · escritório com luz de tarde</span>
+        </div>
+        <div class="placeholder absolute bottom-0 left-0 w-[54%] h-[58%] rounded-[4px_28px_28px_28px] flex items-end p-4 shadow-lg">
+          <span class="text-[10px] font-600 uppercase tracking-wide text-ink/50">retrato · as duas sócias</span>
+        </div>
+        <div class="absolute top-[46%] right-[6%] bg-terra text-puttylite rounded-2xl px-5 py-4 shadow-lg max-w-[180px]">
+          <p class="font-serif text-3xl leading-none mb-1">78%</p>
+          <p class="text-[12px] leading-snug font-600">dos casos resolvidos por acordo, sem julgamento</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ATUAÇÃO ===== -->
+  <section id="atuacao" class="bg-puttylite">
+    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div class="max-w-2xl mb-14">
+        <p class="text-[13px] font-700 uppercase tracking-wider text-terra mb-4">Como ajudamos</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ink font-500 leading-tight">
+          Quatro momentos difíceis, atravessados com você.
+        </h2>
+      </div>
+
+      <!-- blocos com radius e tamanhos variados, sem grid uniforme -->
+      <div class="grid md:grid-cols-12 gap-6">
+        <article class="md:col-span-7 bg-sage/25 rounded-[28px_28px_28px_6px] p-8 md:p-10">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-sage flex items-center justify-center font-serif text-puttylite text-lg">1</span>
+            <h3 class="font-serif text-2xl md:text-3xl text-ink">Divórcio &amp; dissolução de união</h3>
+          </div>
+          <p class="text-ink/75 leading-relaxed">
+            Conduzimos a separação priorizando a mediação — inclusive online —
+            para poupar tempo, dinheiro e desgaste. Quando há má-fé do outro
+            lado, litigamos sem hesitar.
+          </p>
+        </article>
+
+        <article class="md:col-span-5 bg-terra/10 rounded-[6px_28px_28px_28px] p-8 md:p-10">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-terra flex items-center justify-center font-serif text-puttylite text-lg">2</span>
+            <h3 class="font-serif text-2xl md:text-3xl text-ink">Guarda &amp; convivência</h3>
+          </div>
+          <p class="text-ink/75 leading-relaxed">
+            Planos de convivência pensados a partir da rotina real da criança —
+            não de um modelo pronto de petição.
+          </p>
+        </article>
+
+        <article class="md:col-span-5 bg-putty rounded-[28px_6px_28px_28px] p-8 md:p-10">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-ink flex items-center justify-center font-serif text-puttylite text-lg">3</span>
+            <h3 class="font-serif text-2xl md:text-3xl text-ink">Pensão &amp; partilha</h3>
+          </div>
+          <p class="text-ink/75 leading-relaxed">
+            Cálculo de alimentos e divisão de bens com transparência — você
+            entende cada número antes de qualquer proposta.
+          </p>
+        </article>
+
+        <article class="md:col-span-7 bg-sage/25 rounded-[28px_28px_6px_28px] p-8 md:p-10">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-sagedeep flex items-center justify-center font-serif text-puttylite text-lg">4</span>
+            <h3 class="font-serif text-2xl md:text-3xl text-ink">Famílias LGBTQIA+ &amp; homoafetivas</h3>
+          </div>
+          <p class="text-ink/75 leading-relaxed">
+            Reconhecimento de união estável, adoção conjunta e retificação de
+            registro. Direito de família é para toda configuração de família.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5 relative h-[400px]">
+        <div class="placeholder absolute top-0 left-0 w-[60%] h-[62%] rounded-[30px_30px_4px_30px]"></div>
+        <div class="placeholder-sage absolute bottom-0 right-0 w-[58%] h-[60%] rounded-[4px_30px_30px_30px] shadow-lg flex items-end p-4">
+          <span class="text-[10px] font-600 uppercase tracking-wide text-ink/50">as sócias em audiência</span>
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <p class="text-[13px] font-700 uppercase tracking-wider text-terra mb-4">Quem somos</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ink font-500 leading-tight mb-7">
+          Duas trajetórias, uma forma de trabalhar.
+        </h2>
+        <p class="text-ink/75 text-lg leading-relaxed mb-6 max-w-xl">
+          Marina Corá vem da mediação; Júlia Bittencourt, do contencioso. Juntas
+          desde 2011, montaram um escritório onde acordo e litígio não são lados
+          opostos — são ferramentas para o mesmo objetivo.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-6 mt-10">
+          <div class="bg-puttylite rounded-2xl p-6">
+            <p class="font-serif text-2xl text-ink mb-1">Marina Corá</p>
+            <p class="text-terra text-sm font-700 mb-3">Mediadora · CNJ</p>
+            <p class="text-ink/70 text-sm leading-relaxed">Mediadora judicial certificada. Cuida das conversas antes que virem processo.</p>
+          </div>
+          <div class="bg-puttylite rounded-2xl p-6">
+            <p class="font-serif text-2xl text-ink mb-1">Júlia Bittencourt</p>
+            <p class="text-terra text-sm font-700 mb-3">Contencioso de família</p>
+            <p class="text-ink/70 text-sm leading-relaxed">Litiga em vara de família há quinze anos. Firme quando o acordo não vem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOZES ===== -->
+  <section id="vozes" class="bg-sage/20">
+    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <p class="text-[13px] font-700 uppercase tracking-wider text-terra mb-12">Vozes de quem passou por aqui</p>
+      <div class="grid md:grid-cols-12 gap-6">
+        <figure class="md:col-span-7 bg-puttylite rounded-[28px_28px_28px_6px] p-8 md:p-10">
+          <blockquote class="font-serif text-xl md:text-2xl leading-relaxed text-ink/90">
+            “Eu cheguei querendo brigar. Elas me mostraram que o acordo protegia
+            melhor a minha filha do que qualquer sentença. Hoje eu e o pai dela
+            conversamos sem advogado no meio.”
+          </blockquote>
+          <figcaption class="mt-6 text-sm font-600 text-ink/60">Cliente · guarda compartilhada, Pinheiros</figcaption>
+        </figure>
+        <figure class="md:col-span-5 bg-terra text-puttylite rounded-[6px_28px_28px_28px] p-8 md:p-10 flex flex-col justify-between">
+          <blockquote class="font-serif text-xl md:text-2xl leading-relaxed">
+            “Quando percebi que o outro lado agia de má-fé, a Júlia mudou de
+            tom na hora. Nunca me senti desprotegida.”
+          </blockquote>
+          <figcaption class="mt-6 text-sm font-600 text-puttylite/80">Cliente · partilha litigiosa</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6 mt-6">
+        <div class="bg-puttylite rounded-3xl p-7 text-center">
+          <p class="font-serif text-5xl text-terra mb-2">78%</p>
+          <p class="text-ink/65 text-sm leading-relaxed">resolvidos por acordo, sem julgamento</p>
+        </div>
+        <div class="bg-puttylite rounded-3xl p-7 text-center">
+          <p class="font-serif text-5xl text-terra mb-2">15</p>
+          <p class="text-ink/65 text-sm leading-relaxed">anos de atuação em vara de família</p>
+        </div>
+        <div class="bg-puttylite rounded-3xl p-7 text-center">
+          <p class="font-serif text-5xl text-terra mb-2">1ª</p>
+          <p class="text-ink/65 text-sm leading-relaxed">conversa sempre sem compromisso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <div class="bg-ink text-puttylite rounded-[36px] p-8 md:p-14 grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <p class="text-[13px] font-700 uppercase tracking-wider text-sage mb-4">Conversar</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-500 leading-tight mb-6">
+          A primeira conversa é para ouvir você.
+        </h2>
+        <p class="text-puttylite/70 leading-relaxed mb-10 max-w-md">
+          Sem custo e sem compromisso. Conte o que está acontecendo com suas
+          palavras — a gente traduz para o jurídico depois.
+        </p>
+        <dl class="space-y-5 text-[15px]">
+          <div>
+            <dt class="text-sage text-sm font-700 mb-1">Onde estamos</dt>
+            <dd class="text-puttylite/85">R. dos Pinheiros, 610 · cj. 43 · Pinheiros · São Paulo</dd>
+          </div>
+          <div>
+            <dt class="text-sage text-sm font-700 mb-1">WhatsApp &amp; telefone</dt>
+            <dd class="text-puttylite/85">+55 (11) 95522-4080</dd>
+          </div>
+          <div>
+            <dt class="text-sage text-sm font-700 mb-1">E-mail</dt>
+            <dd class="text-puttylite/85"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d12143d1e120f1c181f14090918131e12080f09531c190b531f0f">[email&#160;protected]</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="md:col-span-7">
+        <form class="bg-puttylite text-ink rounded-3xl p-8 md:p-10 space-y-6" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').classList.remove('hidden');">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <label class="block">
+              <span class="text-sm font-700 text-ink/70">Seu nome</span>
+              <input type="text" required class="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink focus:border-terra focus:outline-none" />
+            </label>
+            <label class="block">
+              <span class="text-sm font-700 text-ink/70">Telefone</span>
+              <input type="text" required class="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink focus:border-terra focus:outline-none" />
+            </label>
+          </div>
+          <label class="block">
+            <span class="text-sm font-700 text-ink/70">E-mail</span>
+            <input type="email" required class="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink focus:border-terra focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-700 text-ink/70">O que está acontecendo</span>
+            <textarea rows="4" required class="mt-2 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink focus:border-terra focus:outline-none resize-none"></textarea>
+          </label>
+          <div class="flex items-center gap-5 pt-1">
+            <button type="submit" class="inline-flex items-center h-12 px-8 rounded-full bg-terra text-puttylite text-[14px] font-700 hover:bg-terradeep transition-colors">Enviar mensagem</button>
+            <p id="formOk" class="hidden text-sm font-600 text-terra">Recebido! A gente responde em breve.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-puttylite">
+    <div class="mx-auto max-w-6xl px-6 py-14 grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-5">
+        <p class="font-serif text-2xl text-ink mb-3">Corá <span class="text-terra">&amp;</span> Bittencourt</p>
+        <p class="text-sm text-ink/60 leading-relaxed max-w-xs">
+          Advocacia de família e mediação · Pinheiros, São Paulo · OAB/SP 214.630
+        </p>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-sm font-700 text-terra mb-4">Navegar</p>
+        <ul class="space-y-2 text-sm text-ink/65">
+          <li><a href="#atuacao" class="hover:text-terra transition-colors">Como ajudamos</a></li>
+          <li><a href="#sobre" class="hover:text-terra transition-colors">Quem somos</a></li>
+          <li><a href="#vozes" class="hover:text-terra transition-colors">Vozes</a></li>
+          <li><a href="#contato" class="hover:text-terra transition-colors">Conversar</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="text-sm font-700 text-terra mb-4">Aviso</p>
+        <p class="text-sm text-ink/60 leading-relaxed">
+          Conteúdo informativo, conforme o Provimento 205/2021 da OAB. Não
+          constitui captação de clientela nem promessa de resultado.
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-ink/10">
+      <div class="mx-auto max-w-6xl px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-[12px] text-ink/45">
+        <span>© 2011–2026 Corá &amp; Bittencourt Advocacia</span>
+        <span>São Paulo · Brasil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      var nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+    });
+    document.querySelectorAll('#mobileNav a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.add('hidden');
+        nav.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+</html>

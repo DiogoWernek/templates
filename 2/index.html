@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nogueira Prado — Advocacia &amp; Tecnologia</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          petrol: '#0F3D3E',
+          petroldeep: '#0A2C2D',
+          ember: '#E4572E',
+          bone: '#F4F2ED',
+          ink: '#1A1F1E',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+          sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .placeholder {
+    background-color: #d9dcd4;
+    background-image: repeating-linear-gradient(90deg, transparent 0 15px, rgba(15,61,62,.06) 15px 16px);
+  }
+  .grid-lines {
+    background-image: linear-gradient(rgba(244,242,237,.06) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(244,242,237,.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+</style>
+</head>
+<body class="bg-bone text-ink font-sans antialiased">
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="sticky top-0 z-50 bg-bone/90 backdrop-blur border-b border-petrol/10">
+    <div class="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
+      <a href="#topo" class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 bg-ember block"></span>
+        <span class="font-display text-petrol text-lg font-600 tracking-tight">Nogueira&nbsp;Prado</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-9 text-[13px] font-500 text-petrol/75 font-mono">
+        <a href="#atuacao" class="hover:text-ember transition-colors">/atuação</a>
+        <a href="#metodo" class="hover:text-ember transition-colors">/método</a>
+        <a href="#numeros" class="hover:text-ember transition-colors">/resultados</a>
+        <a href="#contato" class="hover:text-ember transition-colors">/contato</a>
+      </nav>
+      <a href="#contato" class="hidden md:inline-flex items-center h-9 px-5 bg-petrol text-bone text-[12px] font-600 hover:bg-petroldeep transition-colors font-mono">iniciar caso →</a>
+      <button id="menuBtn" class="md:hidden text-petrol text-2xl leading-none" aria-label="Menu">≡</button>
+    </div>
+    <nav id="mobileNav" class="hidden md:hidden border-t border-petrol/10 bg-bone px-6 py-4 flex-col gap-3 text-sm font-mono text-petrol">
+      <a href="#atuacao" class="block py-1">/atuação</a>
+      <a href="#metodo" class="block py-1">/método</a>
+      <a href="#numeros" class="block py-1">/resultados</a>
+      <a href="#contato" class="block py-1">/contato</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO (assimétrico + cartão sobreposto) ===== -->
+  <section id="topo" class="relative bg-petrol text-bone grid-lines">
+    <div class="mx-auto max-w-6xl px-6 pt-20 md:pt-28 pb-32 md:pb-40 grid md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-8">
+        <p class="font-mono text-[12px] text-ember mb-8 tracking-wide">// contencioso digital &amp; proteção de dados</p>
+        <h1 class="font-display text-4xl md:text-[3.5rem] leading-[1.05] font-500 mb-8 max-w-3xl">
+          Direito que acompanha a velocidade de quem constrói produto.
+        </h1>
+        <p class="text-bone/70 text-lg leading-relaxed max-w-xl mb-10">
+          Assessoria jurídica para empresas de tecnologia: contratos de SaaS,
+          adequação à LGPD e disputas de propriedade intelectual — com prazos
+          rastreados como você rastreia um sprint.
+        </p>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#atuacao" class="inline-flex items-center h-11 px-7 bg-ember text-bone text-[13px] font-600 font-mono hover:brightness-110 transition-all">ver áreas</a>
+          <a href="#metodo" class="font-mono text-[13px] text-bone/70 border-b border-bone/30 pb-0.5 hover:text-ember hover:border-ember transition-colors">como trabalhamos</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cartão flutuante que cavalga a borda inferior -->
+    <div class="mx-auto max-w-6xl px-6 relative">
+      <div class="absolute right-6 -bottom-16 w-[300px] bg-bone text-ink border border-petrol/10 shadow-xl p-6 hidden lg:block">
+        <div class="flex items-center justify-between mb-4">
+          <span class="font-mono text-[11px] text-petrol/50">PROC-2026-0417</span>
+          <span class="font-mono text-[10px] bg-ember/10 text-ember px-2 py-0.5">ATIVO</span>
+        </div>
+        <p class="font-display text-lg text-petrol leading-snug mb-4">Adequação LGPD · fintech série&nbsp;A</p>
+        <div class="space-y-2.5 font-mono text-[11px]">
+          <div class="flex justify-between"><span class="text-ink/50">mapeamento de dados</span><span class="text-petrol">✓ concluído</span></div>
+          <div class="flex justify-between"><span class="text-ink/50">política de privacidade</span><span class="text-petrol">✓ concluído</span></div>
+          <div class="flex justify-between"><span class="text-ink/50">DPA com fornecedores</span><span class="text-ember">em curso</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
+  <section id="atuacao" class="mx-auto max-w-6xl px-6 pt-28 md:pt-36 pb-20 md:pb-28">
+    <div class="grid md:grid-cols-12 gap-10 items-end mb-16">
+      <div class="md:col-span-8">
+        <p class="font-mono text-[12px] text-ember mb-5">// áreas de atuação</p>
+        <h2 class="font-display text-3xl md:text-4xl text-petrol font-500 leading-tight max-w-2xl">
+          Onde o direito encosta na engenharia.
+        </h2>
+      </div>
+      <p class="md:col-span-4 text-ink/60 text-sm leading-relaxed md:text-right">
+        Quatro frentes escolhidas por afinidade com produto digital — não um
+        catálogo genérico.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-px bg-petrol/10 border border-petrol/10">
+      <article class="bg-bone p-8 md:p-10 group hover:bg-petrol transition-colors">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-mono text-[12px] text-ember">01</span>
+          <span class="font-mono text-[11px] text-petrol/40 group-hover:text-bone/50 transition-colors">contratos</span>
+        </div>
+        <h3 class="font-display text-2xl text-petrol group-hover:text-bone transition-colors mb-3">SaaS &amp; contratos de software</h3>
+        <p class="text-ink/70 group-hover:text-bone/70 leading-relaxed transition-colors">
+          Termos de uso, SLAs, licenciamento e cláusulas de responsabilidade
+          por indisponibilidade. Escrevemos o que o time comercial consegue
+          fechar sem chamar advogado a cada linha.
+        </p>
+      </article>
+
+      <article class="bg-bone p-8 md:p-10 group hover:bg-petrol transition-colors">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-mono text-[12px] text-ember">02</span>
+          <span class="font-mono text-[11px] text-petrol/40 group-hover:text-bone/50 transition-colors">privacidade</span>
+        </div>
+        <h3 class="font-display text-2xl text-petrol group-hover:text-bone transition-colors mb-3">LGPD &amp; governança de dados</h3>
+        <p class="text-ink/70 group-hover:text-bone/70 leading-relaxed transition-colors">
+          Do mapeamento de fluxos ao relatório de impacto (RIPD) e resposta a
+          incidentes junto à ANPD. Adequação que sobrevive ao próximo deploy.
+        </p>
+      </article>
+
+      <article class="bg-bone p-8 md:p-10 group hover:bg-petrol transition-colors">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-mono text-[12px] text-ember">03</span>
+          <span class="font-mono text-[11px] text-petrol/40 group-hover:text-bone/50 transition-colors">propriedade</span>
+        </div>
+        <h3 class="font-display text-2xl text-petrol group-hover:text-bone transition-colors mb-3">Propriedade intelectual</h3>
+        <p class="text-ink/70 group-hover:text-bone/70 leading-relaxed transition-colors">
+          Registro de marca no INPI, cessão de código-fonte de terceiros e
+          disputas de autoria de software. Quem escreveu o repositório importa.
+        </p>
+      </article>
+
+      <article class="bg-bone p-8 md:p-10 group hover:bg-petrol transition-colors">
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="font-mono text-[12px] text-ember">04</span>
+          <span class="font-mono text-[11px] text-petrol/40 group-hover:text-bone/50 transition-colors">societário</span>
+        </div>
+        <h3 class="font-display text-2xl text-petrol group-hover:text-bone transition-colors mb-3">Rodadas &amp; vesting</h3>
+        <p class="text-ink/70 group-hover:text-bone/70 leading-relaxed transition-colors">
+          Cap table, acordos de sócios com cláusula de vesting e term sheets de
+          investimento. Alinhamos fundador e investidor antes da assinatura.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== MÉTODO ===== -->
+  <section id="metodo" class="bg-petroldeep text-bone grid-lines">
+    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-4">
+        <p class="font-mono text-[12px] text-ember mb-5">// método</p>
+        <h2 class="font-display text-3xl md:text-4xl font-500 leading-tight">Um pipeline, não um mistério.</h2>
+        <p class="text-bone/60 mt-6 leading-relaxed">
+          Você enxerga cada etapa do caso pelo mesmo painel — sem ligar para
+          perguntar “como está andando?”.
+        </p>
+      </div>
+      <div class="md:col-span-8">
+        <ol class="space-y-px bg-bone/10 border border-bone/10">
+          <li class="bg-petroldeep flex gap-6 p-6 md:p-7 items-start">
+            <span class="font-mono text-ember text-sm shrink-0 pt-1">t=0</span>
+            <div>
+              <h3 class="font-display text-xl mb-1">Diagnóstico em 48h</h3>
+              <p class="text-bone/65 leading-relaxed">Lemos contratos e histórico e devolvemos o escopo real do problema — com estimativa de horas, não promessa vaga.</p>
+            </div>
+          </li>
+          <li class="bg-petroldeep flex gap-6 p-6 md:p-7 items-start">
+            <span class="font-mono text-ember text-sm shrink-0 pt-1">t=1</span>
+            <div>
+              <h3 class="font-display text-xl mb-1">Execução rastreada</h3>
+              <p class="text-bone/65 leading-relaxed">Cada peça, prazo e petição fica visível no painel do caso, com status atualizado em tempo real.</p>
+            </div>
+          </li>
+          <li class="bg-petroldeep flex gap-6 p-6 md:p-7 items-start">
+            <span class="font-mono text-ember text-sm shrink-0 pt-1">t=n</span>
+            <div>
+              <h3 class="font-display text-xl mb-1">Fechamento documentado</h3>
+              <p class="text-bone/65 leading-relaxed">Encerramos com um relatório do que foi feito e do que fica de aprendizado para o próximo contrato.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NÚMEROS / DEPOIMENTO ===== -->
+  <section id="numeros" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-3 gap-px bg-petrol/10 border border-petrol/10 mb-16">
+      <div class="bg-bone p-8">
+        <p class="font-display text-5xl text-petrol mb-2">48h</p>
+        <p class="text-ink/60 text-sm leading-relaxed">prazo médio entre o primeiro contato e o diagnóstico do caso.</p>
+      </div>
+      <div class="bg-bone p-8">
+        <p class="font-display text-5xl text-petrol mb-2">120<span class="text-ember">+</span></p>
+        <p class="text-ink/60 text-sm leading-relaxed">empresas de tecnologia adequadas à LGPD desde 2019.</p>
+      </div>
+      <div class="bg-bone p-8">
+        <p class="font-display text-5xl text-petrol mb-2">0</p>
+        <p class="text-ink/60 text-sm leading-relaxed">sanções aplicadas pela ANPD a clientes sob nossa assessoria.</p>
+      </div>
+    </div>
+
+    <figure class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-3">
+        <div class="placeholder aspect-square w-full flex items-end p-4">
+          <span class="font-mono text-[10px] text-petrol/50 uppercase">logo cliente / retrato</span>
+        </div>
+      </div>
+      <blockquote class="md:col-span-9 font-display text-2xl md:text-[1.7rem] leading-snug text-petrol">
+        “Nunca mais precisei perguntar em que pé estava o processo. Abro o
+        painel e sei. Para um time de produto, isso muda tudo.”
+        <span class="block mt-5 font-sans font-mono text-[13px] font-normal text-ink/55">
+          — Head jurídico · plataforma de logística, Campinas
+        </span>
+      </blockquote>
+    </figure>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="bg-petrol text-bone grid-lines">
+    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <p class="font-mono text-[12px] text-ember mb-5">// contato</p>
+        <h2 class="font-display text-3xl md:text-4xl font-500 leading-tight mb-6">Abra um caso.</h2>
+        <p class="text-bone/65 leading-relaxed mb-10 max-w-md">
+          Conte o problema em texto corrido — do jeito que descreveria num
+          canal de time. Respondemos com o próximo passo concreto, não com
+          jargão.
+        </p>
+        <dl class="space-y-5 font-mono text-[13px]">
+          <div>
+            <dt class="text-ember mb-1">endereço</dt>
+            <dd class="text-bone/80">R. Fidêncio Ramos, 195 · Vila Olímpia · São Paulo</dd>
+          </div>
+          <div>
+            <dt class="text-ember mb-1">e-mail</dt>
+            <dd class="text-bone/80"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6a5a7b5a9b586a8a9a1b3a3afb4a7b6b4a7a2a9e8a7a2b0e8a4b4">[email&#160;protected]</a></dd>
+          </div>
+          <div>
+            <dt class="text-ember mb-1">telefone</dt>
+            <dd class="text-bone/80">+55 (11) 4210-3377</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="md:col-span-7">
+        <form class="bg-bone text-ink p-8 md:p-10 space-y-6" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').classList.remove('hidden');">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <label class="block">
+              <span class="font-mono text-[11px] uppercase text-petrol/60">nome</span>
+              <input type="text" required class="mt-2 w-full border border-petrol/15 bg-white px-3 py-2.5 text-petrol focus:border-ember focus:outline-none" />
+            </label>
+            <label class="block">
+              <span class="font-mono text-[11px] uppercase text-petrol/60">empresa</span>
+              <input type="text" class="mt-2 w-full border border-petrol/15 bg-white px-3 py-2.5 text-petrol focus:border-ember focus:outline-none" />
+            </label>
+          </div>
+          <label class="block">
+            <span class="font-mono text-[11px] uppercase text-petrol/60">e-mail</span>
+            <input type="email" required class="mt-2 w-full border border-petrol/15 bg-white px-3 py-2.5 text-petrol focus:border-ember focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="font-mono text-[11px] uppercase text-petrol/60">descreva o caso</span>
+            <textarea rows="4" required class="mt-2 w-full border border-petrol/15 bg-white px-3 py-2.5 text-petrol focus:border-ember focus:outline-none resize-none"></textarea>
+          </label>
+          <div class="flex items-center gap-6 pt-1">
+            <button type="submit" class="inline-flex items-center h-11 px-8 bg-ember text-bone text-[13px] font-600 font-mono hover:brightness-110 transition-all">enviar caso →</button>
+            <p id="formOk" class="hidden font-mono text-[13px] text-petrol">recebido — respondemos em 48h.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-petroldeep text-bone/55 border-t border-bone/10">
+    <div class="mx-auto max-w-6xl px-6 py-14 grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="w-2.5 h-2.5 bg-ember block"></span>
+          <span class="font-display text-bone text-lg font-600">Nogueira Prado</span>
+        </div>
+        <p class="text-sm leading-relaxed max-w-xs">
+          Advocacia para empresas de tecnologia. São Paulo · OAB/SP 5.309.
+        </p>
+      </div>
+      <div class="md:col-span-3">
+        <p class="font-mono text-[11px] uppercase text-ember mb-4">navegação</p>
+        <ul class="space-y-2 text-sm font-mono">
+          <li><a href="#atuacao" class="hover:text-ember transition-colors">/atuação</a></li>
+          <li><a href="#metodo" class="hover:text-ember transition-colors">/método</a></li>
+          <li><a href="#numeros" class="hover:text-ember transition-colors">/resultados</a></li>
+          <li><a href="#contato" class="hover:text-ember transition-colors">/contato</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="font-mono text-[11px] uppercase text-ember mb-4">aviso</p>
+        <p class="text-sm leading-relaxed">
+          Conteúdo informativo conforme o Provimento 205/2021 da OAB. Não
+          constitui captação de clientela nem oferta de resultado.
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-bone/10">
+      <div class="mx-auto max-w-6xl px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 font-mono text-[12px] text-bone/40">
+        <span>© 2019–2026 Nogueira Prado Advogados</span>
+        <span>São Paulo · BR</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      var nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+    });
+    document.querySelectorAll('#mobileNav a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.add('hidden');
+        nav.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+</html>

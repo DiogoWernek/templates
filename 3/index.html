@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sampaio — Advocacia</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B0B0B',
+          paper: '#FBFBF9',
+          clay: '#7A4B3A',
+          soft: '#1A1A1A',
+        },
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .track { letter-spacing: .04em; }
+  .track-wide { letter-spacing: .12em; }
+  .label { letter-spacing: .28em; }
+  /* Linha-índice: acento terracota desliza no hover */
+  .index-row { position: relative; }
+  .index-row::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: #7A4B3A;
+    transform: scaleY(0); transform-origin: top; transition: transform .35s ease;
+  }
+  .index-row:hover::before { transform: scaleY(1); }
+  .index-row:hover .idx-title { color: #7A4B3A; }
+  .idx-title { transition: color .35s ease; }
+  .placeholder {
+    background-color: #ececE6;
+    background-image: repeating-linear-gradient(135deg, transparent 0 13px, rgba(11,11,11,.04) 13px 14px);
+  }
+</style>
+</head>
+<body class="bg-paper text-soft font-serif antialiased">
+
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 bg-paper/95 backdrop-blur">
+    <div class="mx-auto max-w-5xl px-6 h-20 flex items-center justify-between border-b border-ink/15">
+      <a href="#topo" class="font-serif text-2xl track-wide text-ink">SAMPAIO</a>
+      <nav class="hidden md:flex items-center gap-10 font-mono text-[11px] label uppercase text-ink/60">
+        <a href="#atuacao" class="hover:text-clay transition-colors">Atuação</a>
+        <a href="#escritorio" class="hover:text-clay transition-colors">Escritório</a>
+        <a href="#casos" class="hover:text-clay transition-colors">Casos</a>
+        <a href="#contato" class="hover:text-clay transition-colors">Contato</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden font-mono text-[11px] label uppercase text-ink" aria-label="Menu">Menu</button>
+    </div>
+    <nav id="mobileNav" class="hidden md:hidden bg-paper px-6 py-4 flex-col gap-3 font-mono text-[12px] label uppercase text-ink border-b border-ink/15">
+      <a href="#atuacao" class="block py-1">Atuação</a>
+      <a href="#escritorio" class="block py-1">Escritório</a>
+      <a href="#casos" class="block py-1">Casos</a>
+      <a href="#contato" class="block py-1">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="topo" class="mx-auto max-w-5xl px-6">
+    <div class="py-24 md:py-36 border-b border-ink/15">
+      <p class="font-mono text-[11px] label uppercase text-clay mb-10">Advocacia civil e de família · desde 2006</p>
+      <h1 class="font-serif text-5xl md:text-7xl leading-[1.02] track text-ink font-500 max-w-4xl mb-12">
+        Poucos casos por vez.<br />Cada um levado até o fim.
+      </h1>
+      <div class="grid md:grid-cols-12 gap-8 items-end">
+        <p class="md:col-span-7 font-mono text-[13px] leading-relaxed text-soft/70 max-w-lg">
+          Renata Sampaio atua sozinha, com uma advogada assistente. É uma
+          escolha: no máximo doze causas ativas, para que nenhuma seja
+          conduzida no automático.
+        </p>
+        <div class="md:col-span-5 md:text-right">
+          <a href="#contato" class="inline-block font-mono text-[11px] label uppercase text-ink border-b border-clay pb-1 hover:text-clay transition-colors">Agendar conversa →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ATUAÇÃO (lista-índice) ===== -->
+  <section id="atuacao" class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="font-mono text-[11px] label uppercase text-clay">Áreas de atuação</h2>
+      <span class="font-mono text-[11px] text-ink/40">04 frentes</span>
+    </div>
+
+    <div>
+      <a href="#contato" class="index-row group block border-t border-ink/15 py-8 pl-6 md:pl-10">
+        <div class="grid md:grid-cols-12 gap-4 items-baseline">
+          <span class="md:col-span-1 font-mono text-[12px] text-ink/40 pt-2">I</span>
+          <h3 class="idx-title md:col-span-4 font-serif text-3xl md:text-4xl track text-ink">Direito de Família</h3>
+          <p class="md:col-span-7 font-mono text-[13px] leading-relaxed text-soft/65">
+            Divórcios litigiosos, guarda compartilhada e partilha de bens.
+            Conduzimos a mediação antes do processo sempre que a criança está
+            no meio.
+          </p>
+        </div>
+      </a>
+
+      <a href="#contato" class="index-row group block border-t border-ink/15 py-8 pl-6 md:pl-10">
+        <div class="grid md:grid-cols-12 gap-4 items-baseline">
+          <span class="md:col-span-1 font-mono text-[12px] text-ink/40 pt-2">II</span>
+          <h3 class="idx-title md:col-span-4 font-serif text-3xl md:text-4xl track text-ink">Sucessões</h3>
+          <p class="md:col-span-7 font-mono text-[13px] leading-relaxed text-soft/65">
+            Inventários, testamentos e disputas entre herdeiros. Priorizamos o
+            inventário extrajudicial em cartório quando há consenso.
+          </p>
+        </div>
+      </a>
+
+      <a href="#contato" class="index-row group block border-t border-ink/15 py-8 pl-6 md:pl-10">
+        <div class="grid md:grid-cols-12 gap-4 items-baseline">
+          <span class="md:col-span-1 font-mono text-[12px] text-ink/40 pt-2">III</span>
+          <h3 class="idx-title md:col-span-4 font-serif text-3xl md:text-4xl track text-ink">Responsabilidade Civil</h3>
+          <p class="md:col-span-7 font-mono text-[13px] leading-relaxed text-soft/65">
+            Ações de indenização por dano moral e material — erro médico,
+            acidente de trânsito e defeito de produto. Quantificamos o dano com
+            perícia, não com chute.
+          </p>
+        </div>
+      </a>
+
+      <a href="#contato" class="index-row group block border-t border-b border-ink/15 py-8 pl-6 md:pl-10">
+        <div class="grid md:grid-cols-12 gap-4 items-baseline">
+          <span class="md:col-span-1 font-mono text-[12px] text-ink/40 pt-2">IV</span>
+          <h3 class="idx-title md:col-span-4 font-serif text-3xl md:text-4xl track text-ink">Contratos Civis</h3>
+          <p class="md:col-span-7 font-mono text-[13px] leading-relaxed text-soft/65">
+            Revisão e rescisão de locação, compra e venda de imóvel e distrato.
+            Lemos a letra miúda que ninguém leu antes de assinar.
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== ESCRITÓRIO ===== -->
+  <section id="escritorio" class="mx-auto max-w-5xl px-6 py-20 md:py-28 border-t border-ink/15">
+    <div class="grid md:grid-cols-12 gap-12 items-start">
+      <div class="md:col-span-5">
+        <div class="placeholder aspect-[3/4] w-full flex items-end p-4">
+          <span class="font-mono text-[10px] text-ink/50 uppercase label">retrato · luz natural</span>
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <p class="font-mono text-[11px] label uppercase text-clay mb-8">O escritório</p>
+        <h2 class="font-serif text-4xl md:text-5xl track text-ink leading-tight mb-8">
+          Advocacia sem sala de espera cheia.
+        </h2>
+        <div class="space-y-6 font-mono text-[13px] leading-relaxed text-soft/70 max-w-lg">
+          <p>
+            Renata Sampaio abriu o escritório em 2006, depois de sete anos numa
+            banca grande onde os clientes viravam número de pasta. A regra que
+            trouxe é simples: quem contrata fala direto com ela.
+          </p>
+          <p>
+            O teto de doze causas ativas não é modéstia — é o que permite
+            responder um e-mail no mesmo dia e chegar à audiência tendo lido
+            cada folha dos autos.
+          </p>
+        </div>
+        <dl class="mt-10 grid grid-cols-2 gap-8 max-w-md">
+          <div class="border-t border-clay pt-4">
+            <dt class="font-serif text-4xl track text-ink">20</dt>
+            <dd class="font-mono text-[11px] label uppercase text-soft/55 mt-1">anos de atuação</dd>
+          </div>
+          <div class="border-t border-clay pt-4">
+            <dt class="font-serif text-4xl track text-ink">12</dt>
+            <dd class="font-mono text-[11px] label uppercase text-soft/55 mt-1">causas simultâneas, no máximo</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASOS / DEPOIMENTOS ===== -->
+  <section id="casos" class="bg-ink text-paper">
+    <div class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+      <p class="font-mono text-[11px] label uppercase text-clay mb-14">Casos &amp; palavras</p>
+
+      <figure class="border-t border-paper/20 py-10">
+        <blockquote class="font-serif text-3xl md:text-[2.4rem] track leading-[1.15] text-paper/90 max-w-3xl">
+          “Fui a três escritórios antes. Só aqui alguém sentou, leu o processo
+          inteiro na minha frente e disse o que era possível — e o que não era.”
+        </blockquote>
+        <figcaption class="mt-8 font-mono text-[12px] text-paper/50">
+          Cliente · ação de guarda, Santo André
+        </figcaption>
+      </figure>
+
+      <figure class="border-t border-paper/20 py-10">
+        <blockquote class="font-serif text-3xl md:text-[2.4rem] track leading-[1.15] text-paper/90 max-w-3xl">
+          “Um inventário que arrastava havia dois anos foi resolvido em cartório
+          em quatro meses. Sem drama entre os irmãos.”
+        </blockquote>
+        <figcaption class="mt-8 font-mono text-[12px] text-paper/50">
+          Cliente · inventário extrajudicial, São Bernardo
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <p class="font-mono text-[11px] label uppercase text-clay mb-8">Contato</p>
+        <h2 class="font-serif text-4xl md:text-5xl track text-ink leading-tight mb-8">
+          A primeira conversa dura uma hora.
+        </h2>
+        <p class="font-mono text-[13px] leading-relaxed text-soft/70 max-w-md mb-10">
+          E é sem custo. Escreva em poucas linhas o que aconteceu. Se o caso não
+          for da nossa área, indicamos quem cuida melhor dele.
+        </p>
+        <dl class="space-y-5 font-mono text-[13px]">
+          <div>
+            <dt class="text-clay label uppercase text-[11px] mb-1">Endereço</dt>
+            <dd class="text-soft/80">Av. Portugal, 1400 · sala 72 · Santo André · SP</dd>
+          </div>
+          <div>
+            <dt class="text-clay label uppercase text-[11px] mb-1">E-mail</dt>
+            <dd class="text-soft/80"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3240575c5346537241535f42535b5d1c5356441c5040">[email&#160;protected]</a></dd>
+          </div>
+          <div>
+            <dt class="text-clay label uppercase text-[11px] mb-1">Telefone</dt>
+            <dd class="text-soft/80">+55 (11) 4433-2109</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="md:col-span-7">
+        <form class="border border-ink/15 p-8 md:p-10 space-y-8" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').classList.remove('hidden');">
+          <label class="block">
+            <span class="font-mono text-[11px] label uppercase text-ink/60">Nome</span>
+            <input type="text" required class="mt-3 w-full border-b border-ink/25 bg-transparent py-2 font-mono text-sm text-ink focus:border-clay focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="font-mono text-[11px] label uppercase text-ink/60">E-mail ou telefone</span>
+            <input type="text" required class="mt-3 w-full border-b border-ink/25 bg-transparent py-2 font-mono text-sm text-ink focus:border-clay focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="font-mono text-[11px] label uppercase text-ink/60">O que aconteceu</span>
+            <textarea rows="4" required class="mt-3 w-full border-b border-ink/25 bg-transparent py-2 font-mono text-sm text-ink focus:border-clay focus:outline-none resize-none"></textarea>
+          </label>
+          <div class="flex items-center gap-6">
+            <button type="submit" class="font-mono text-[11px] label uppercase text-paper bg-ink px-8 py-4 hover:bg-clay transition-colors">Enviar →</button>
+            <p id="formOk" class="hidden font-mono text-[12px] text-clay">Recebido — retornamos em um dia útil.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-ink/15">
+    <div class="mx-auto max-w-5xl px-6 py-12 flex flex-col md:flex-row justify-between gap-8">
+      <div>
+        <p class="font-serif text-2xl track-wide text-ink mb-2">SAMPAIO</p>
+        <p class="font-mono text-[12px] text-soft/60 max-w-xs leading-relaxed">
+          Advocacia civil e de família · Santo André · OAB/SP 178.442
+        </p>
+      </div>
+      <div class="font-mono text-[11px] text-soft/50 leading-relaxed max-w-sm">
+        Conteúdo meramente informativo, conforme o Provimento 205/2021 da OAB.
+        Não há captação de clientela nem promessa de resultado.
+        <span class="block mt-4 text-soft/40">© 2006–2026 Sampaio Advocacia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      var nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+    });
+    document.querySelectorAll('#mobileNav a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.add('hidden');
+        nav.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+</html>

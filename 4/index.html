@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adriano Maranhão — Advocacia Criminal Empresarial</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#14120F',
+          panel: '#1E1B17',
+          panel2: '#26221C',
+          gold: '#B08D57',
+          goldlite: '#CBAA76',
+          bone: '#E8E3D8',
+        },
+        fontFamily: {
+          display: ['"Fraunces"', 'Georgia', 'serif'],
+          sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  /* textura sutil de fundo */
+  .grain {
+    background-color: #14120F;
+    background-image:
+      radial-gradient(rgba(176,141,87,.05) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+  .hairline { letter-spacing: .26em; }
+  .placeholder {
+    background-color: #211d18;
+    background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(176,141,87,.08) 14px 15px);
+  }
+  .wordmark { font-optical-sizing: auto; }
+</style>
+</head>
+<body class="grain text-bone font-sans antialiased">
+
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 bg-void/85 backdrop-blur border-b border-bone/10">
+    <div class="mx-auto max-w-6xl px-6 h-[74px] flex items-center justify-between">
+      <a href="#topo" class="font-display text-xl text-bone wordmark">Adriano&nbsp;Maranhão</a>
+      <nav class="hidden md:flex items-center gap-9 text-[12px] font-500 hairline uppercase text-bone/55">
+        <a href="#pratica" class="hover:text-goldlite transition-colors">Prática</a>
+        <a href="#origem" class="hover:text-goldlite transition-colors">Origem</a>
+        <a href="#provas" class="hover:text-goldlite transition-colors">Provas</a>
+        <a href="#acesso" class="hover:text-goldlite transition-colors">Acesso</a>
+      </nav>
+      <a href="#acesso" class="hidden md:inline-flex items-center h-9 px-5 border border-gold/60 text-goldlite text-[11px] font-600 hairline uppercase hover:bg-gold hover:text-void transition-colors">Consulta reservada</a>
+      <button id="menuBtn" class="md:hidden text-bone text-2xl leading-none" aria-label="Menu">≡</button>
+    </div>
+    <nav id="mobileNav" class="hidden md:hidden bg-void border-t border-bone/10 px-6 py-4 flex-col gap-3 text-[12px] hairline uppercase text-bone/70">
+      <a href="#pratica" class="block py-1">Prática</a>
+      <a href="#origem" class="block py-1">Origem</a>
+      <a href="#provas" class="block py-1">Provas</a>
+      <a href="#acesso" class="block py-1">Acesso</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="topo" class="relative overflow-hidden">
+    <div class="mx-auto max-w-6xl px-6 pt-24 md:pt-32 pb-24 md:pb-32">
+      <p class="text-[11px] hairline uppercase text-gold mb-10">Defesa penal empresarial · atuação nacional</p>
+      <h1 class="font-display text-6xl md:text-[7.5rem] leading-[0.92] text-bone wordmark font-500 mb-10">
+        Discrição<br /><span class="text-gold">é a defesa.</span>
+      </h1>
+      <div class="grid md:grid-cols-12 gap-8 items-end">
+        <p class="md:col-span-6 text-bone/60 text-lg leading-relaxed max-w-lg">
+          Representação de executivos e empresas em investigações criminais,
+          colaborações e crimes econômicos. O caso mais bem resolvido é o que
+          nunca chega ao jornal.
+        </p>
+        <div class="md:col-span-6 md:text-right flex md:justify-end gap-8">
+          <a href="#acesso" class="inline-flex items-center h-11 px-7 bg-gold text-void text-[12px] font-600 hairline uppercase hover:bg-goldlite transition-colors">Falar em sigilo</a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ===== PRÁTICA ===== -->
+  <section id="pratica" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark sticky top-28">Prática</h2>
+        <p class="text-bone/50 mt-6 text-[12px] hairline uppercase">Art. I — quatro frentes</p>
+      </div>
+      <div class="md:col-span-8 space-y-px">
+        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
+          <div class="flex items-baseline justify-between mb-3">
+            <h3 class="font-display text-2xl text-goldlite">Crimes econômicos</h3>
+            <span class="text-[11px] hairline text-bone/35">i</span>
+          </div>
+          <p class="text-bone/65 leading-relaxed">
+            Defesa em sonegação fiscal, lavagem de dinheiro e gestão
+            fraudulenta. Atuamos desde a fase de inquérito, quando ainda dá para
+            evitar a denúncia.
+          </p>
+        </article>
+        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
+          <div class="flex items-baseline justify-between mb-3">
+            <h3 class="font-display text-2xl text-goldlite">Investigações internas</h3>
+            <span class="text-[11px] hairline text-bone/35">ii</span>
+          </div>
+          <p class="text-bone/65 leading-relaxed">
+            Apuração de fraude e desvio dentro da empresa, com relatório apto a
+            sustentar demissão por justa causa ou acordo de leniência.
+          </p>
+        </article>
+        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
+          <div class="flex items-baseline justify-between mb-3">
+            <h3 class="font-display text-2xl text-goldlite">Colaboração premiada</h3>
+            <span class="text-[11px] hairline text-bone/35">iii</span>
+          </div>
+          <p class="text-bone/65 leading-relaxed">
+            Negociação de acordos de colaboração e delação com o Ministério
+            Público. Medimos cada palavra do anexo antes de assinar.
+          </p>
+        </article>
+        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
+          <div class="flex items-baseline justify-between mb-3">
+            <h3 class="font-display text-2xl text-goldlite">Compliance criminal</h3>
+            <span class="text-[11px] hairline text-bone/35">iv</span>
+          </div>
+          <p class="text-bone/65 leading-relaxed">
+            Programas de integridade sob a Lei Anticorrupção e treinamento de
+            diretoria. Prevenção documentada vale mais que defesa tardia.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ORIGEM ===== -->
+  <section id="origem" class="border-y border-bone/10">
+    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5">
+        <div class="placeholder aspect-[4/5] w-full flex items-end p-5">
+          <span class="text-[10px] hairline uppercase text-bone/40">retrato sóbrio · pouca luz</span>
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark mb-8">Origem</h2>
+        <p class="text-bone/70 text-lg leading-relaxed mb-6 max-w-xl">
+          Adriano Maranhão foi promotor de Justiça por onze anos antes de passar
+          à defesa. Conhece a acusação de dentro — sabe onde ela costuma
+          apressar a tese.
+        </p>
+        <p class="text-bone/60 leading-relaxed mb-10 max-w-xl">
+          O escritório trabalha por indicação e não divulga a lista de clientes.
+          A reputação que interessa é a que circula entre pares, não a que
+          aparece em ranking.
+        </p>
+        <div class="grid grid-cols-3 gap-6 max-w-lg">
+          <div class="border-t border-gold pt-4">
+            <p class="font-display text-4xl text-goldlite">11</p>
+            <p class="text-[11px] hairline uppercase text-bone/45 mt-2">anos no MP</p>
+          </div>
+          <div class="border-t border-gold pt-4">
+            <p class="font-display text-4xl text-goldlite">18</p>
+            <p class="text-[11px] hairline uppercase text-bone/45 mt-2">anos na defesa</p>
+          </div>
+          <div class="border-t border-gold pt-4">
+            <p class="font-display text-4xl text-goldlite">∅</p>
+            <p class="text-[11px] hairline uppercase text-bone/45 mt-2">publicidade de casos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROVAS / DEPOIMENTO ===== -->
+  <section id="provas" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark">Provas</h2>
+        <p class="text-bone/50 mt-6 text-[12px] hairline uppercase">Art. III — o que dizem</p>
+      </div>
+      <div class="md:col-span-8">
+        <figure class="border-t border-bone/15 py-10">
+          <blockquote class="font-display text-2xl md:text-[1.9rem] leading-snug text-bone/90">
+            “A investigação foi arquivada antes da denúncia. Nunca houve
+            audiência, nunca houve manchete. Era exatamente o que eu precisava
+            que não acontecesse.”
+          </blockquote>
+          <figcaption class="mt-6 text-[12px] hairline uppercase text-gold">
+            Diretor-presidente · grupo do agronegócio
+          </figcaption>
+        </figure>
+        <figure class="border-t border-bone/15 py-10">
+          <blockquote class="font-display text-2xl md:text-[1.9rem] leading-snug text-bone/90">
+            “Explicou cada risco sem suavizar. Preferi a verdade dura à
+            promessa fácil — e ela se confirmou no melhor cenário possível.”
+          </blockquote>
+          <figcaption class="mt-6 text-[12px] hairline uppercase text-gold">
+            Sócia · construtora de médio porte
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACESSO / CONTATO ===== -->
+  <section id="acesso" class="border-t border-bone/10">
+    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark mb-8">Acesso</h2>
+        <p class="text-bone/65 leading-relaxed mb-10 max-w-md">
+          O atendimento começa por uma conversa reservada, por telefone ou
+          pessoalmente. Nada é registrado por escrito antes de firmarmos o
+          sigilo profissional.
+        </p>
+        <dl class="space-y-5 text-[14px]">
+          <div>
+            <dt class="text-[11px] hairline uppercase text-gold mb-1">Escritório</dt>
+            <dd class="text-bone/80">R. Joaquim Floriano, 820 · 14º andar · Itaim Bibi · São Paulo</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] hairline uppercase text-gold mb-1">Linha direta</dt>
+            <dd class="text-bone/80">+55 (11) 3168-4500</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] hairline uppercase text-gold mb-1">E-mail</dt>
+            <dd class="text-bone/80"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="650204070c0b001100250401170c040b0a080417040b0d040a4b0401134b0717">[email&#160;protected]</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="md:col-span-7">
+        <form class="bg-panel border border-bone/10 p-8 md:p-10 space-y-6" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').classList.remove('hidden');">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <label class="block">
+              <span class="text-[11px] hairline uppercase text-bone/50">Nome</span>
+              <input type="text" required class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none" />
+            </label>
+            <label class="block">
+              <span class="text-[11px] hairline uppercase text-bone/50">Telefone</span>
+              <input type="text" required class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none" />
+            </label>
+          </div>
+          <label class="block">
+            <span class="text-[11px] hairline uppercase text-bone/50">Melhor horário para contato</span>
+            <input type="text" class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="text-[11px] hairline uppercase text-bone/50">Assunto, em uma linha</span>
+            <textarea rows="3" required class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none resize-none"></textarea>
+          </label>
+          <div class="flex items-center gap-6 pt-1">
+            <button type="submit" class="inline-flex items-center h-11 px-8 bg-gold text-void text-[12px] font-600 hairline uppercase hover:bg-goldlite transition-colors">Solicitar contato</button>
+            <p id="formOk" class="hidden text-[12px] text-goldlite">Recebido. Ligamos de volta em sigilo.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-bone/10">
+    <div class="mx-auto max-w-6xl px-6 py-14 grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-5">
+        <p class="font-display text-2xl text-bone wordmark mb-3">Adriano Maranhão</p>
+        <p class="text-sm text-bone/55 leading-relaxed max-w-xs">
+          Advocacia criminal empresarial · atuação nacional · OAB/SP 92.077
+        </p>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-[11px] hairline uppercase text-gold mb-4">Seções</p>
+        <ul class="space-y-2 text-sm text-bone/60">
+          <li><a href="#pratica" class="hover:text-goldlite transition-colors">Prática</a></li>
+          <li><a href="#origem" class="hover:text-goldlite transition-colors">Origem</a></li>
+          <li><a href="#provas" class="hover:text-goldlite transition-colors">Provas</a></li>
+          <li><a href="#acesso" class="hover:text-goldlite transition-colors">Acesso</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="text-[11px] hairline uppercase text-gold mb-4">Aviso</p>
+        <p class="text-sm text-bone/55 leading-relaxed">
+          Conteúdo informativo, conforme o Provimento 205/2021 da OAB. Não há
+          oferta de serviços, captação de clientela nem garantia de resultado.
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-bone/10">
+      <div class="mx-auto max-w-6xl px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-[12px] text-bone/40">
+        <span>© 2008–2026 Adriano Maranhão Advocacia</span>
+        <span>São Paulo · Brasil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      var nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+    });
+    document.querySelectorAll('#mobileNav a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.add('hidden');
+        nav.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+</html>
