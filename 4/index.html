@@ -1,322 +1,310 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adriano Maranhão — Advocacia Criminal Empresarial</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          void: '#14120F',
-          panel: '#1E1B17',
-          panel2: '#26221C',
-          gold: '#B08D57',
-          goldlite: '#CBAA76',
-          bone: '#E8E3D8',
-        },
-        fontFamily: {
-          display: ['"Fraunces"', 'Georgia', 'serif'],
-          sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { -webkit-font-smoothing: antialiased; }
-  a { color: inherit; }
-  /* textura sutil de fundo */
-  .grain {
-    background-color: #14120F;
-    background-image:
-      radial-gradient(rgba(176,141,87,.05) 1px, transparent 1px);
-    background-size: 4px 4px;
-  }
-  .hairline { letter-spacing: .26em; }
-  .placeholder {
-    background-color: #211d18;
-    background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(176,141,87,.08) 14px 15px);
-  }
-  .wordmark { font-optical-sizing: auto; }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
-<body class="grain text-bone font-sans antialiased">
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#ffffff;font-family:'Poppins',sans-serif;color:#2f2b26;-webkit-font-smoothing:antialiased}
+  a{color:#b3a06b;text-decoration:none}
+  a:hover{color:#9c8a56}
+  input,textarea{font-family:'Poppins',sans-serif}
+  ::selection{background:#b3a06b;color:#fff}
+</style>
+</helmet>
+<div style="background:#fff;overflow:hidden;">
 
-  <!-- ===== HEADER ===== -->
-  <header class="sticky top-0 z-50 bg-void/85 backdrop-blur border-b border-bone/10">
-    <div class="mx-auto max-w-6xl px-6 h-[74px] flex items-center justify-between">
-      <a href="#topo" class="font-display text-xl text-bone wordmark">Adriano&nbsp;Maranhão</a>
-      <nav class="hidden md:flex items-center gap-9 text-[12px] font-500 hairline uppercase text-bone/55">
-        <a href="#pratica" class="hover:text-goldlite transition-colors">Prática</a>
-        <a href="#origem" class="hover:text-goldlite transition-colors">Origem</a>
-        <a href="#provas" class="hover:text-goldlite transition-colors">Provas</a>
-        <a href="#acesso" class="hover:text-goldlite transition-colors">Acesso</a>
-      </nav>
-      <a href="#acesso" class="hidden md:inline-flex items-center h-9 px-5 border border-gold/60 text-goldlite text-[11px] font-600 hairline uppercase hover:bg-gold hover:text-void transition-colors">Consulta reservada</a>
-      <button id="menuBtn" class="md:hidden text-bone text-2xl leading-none" aria-label="Menu">≡</button>
-    </div>
-    <nav id="mobileNav" class="hidden md:hidden bg-void border-t border-bone/10 px-6 py-4 flex-col gap-3 text-[12px] hairline uppercase text-bone/70">
-      <a href="#pratica" class="block py-1">Prática</a>
-      <a href="#origem" class="block py-1">Origem</a>
-      <a href="#provas" class="block py-1">Provas</a>
-      <a href="#acesso" class="block py-1">Acesso</a>
-    </nav>
-  </header>
+  <!-- ============ HERO ============ -->
+  <section style="position:relative;padding:0 0 40px;">
+    <div style="position:relative;margin:0;border-bottom-left-radius:120px 90px;overflow:hidden;min-height:760px;background:#141210;">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(115deg,#241d15,#241d15 18px,#1a140d 18px,#1a140d 36px);"></div>
+      <div style="position:absolute;top:0;right:0;bottom:0;width:62%;background:repeating-linear-gradient(135deg,#3a2c1b,#3a2c1b 14px,#2c2015 14px,#2c2015 28px);"></div>
+      <span style="position:absolute;top:18px;right:26px;font-family:monospace;font-size:12px;color:#8a7a60;background:rgba(0,0,0,.4);padding:6px 12px;border-radius:6px;z-index:2;">foto — estátua da justiça</span>
+      <div style="position:absolute;inset:0;background:linear-gradient(95deg,#141210 30%,rgba(20,18,16,.75) 52%,rgba(20,18,16,.25) 74%,transparent 100%);"></div>
 
-  <!-- ===== HERO ===== -->
-  <section id="topo" class="relative overflow-hidden">
-    <div class="mx-auto max-w-6xl px-6 pt-24 md:pt-32 pb-24 md:pb-32">
-      <p class="text-[11px] hairline uppercase text-gold mb-10">Defesa penal empresarial · atuação nacional</p>
-      <h1 class="font-display text-6xl md:text-[7.5rem] leading-[0.92] text-bone wordmark font-500 mb-10">
-        Discrição<br /><span class="text-gold">é a defesa.</span>
-      </h1>
-      <div class="grid md:grid-cols-12 gap-8 items-end">
-        <p class="md:col-span-6 text-bone/60 text-lg leading-relaxed max-w-lg">
-          Representação de executivos e empresas em investigações criminais,
-          colaborações e crimes econômicos. O caso mais bem resolvido é o que
-          nunca chega ao jornal.
-        </p>
-        <div class="md:col-span-6 md:text-right flex md:justify-end gap-8">
-          <a href="#acesso" class="inline-flex items-center h-11 px-7 bg-gold text-void text-[12px] font-600 hairline uppercase hover:bg-goldlite transition-colors">Falar em sigilo</a>
+      <!-- nav -->
+      <div style="position:relative;z-index:5;max-width:1360px;margin:0 auto;padding:30px 60px 0;display:flex;align-items:center;justify-content:space-between;gap:30px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:52px;height:44px;display:flex;align-items:flex-end;justify-content:center;">
+            <svg viewBox="0 0 48 40" width="48" height="40" fill="none"><path d="M24 3 44 14H4z" fill="#e9e2d4"/><rect x="9" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="17" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="27" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="35" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="4" y="35" width="40" height="4" fill="#e9e2d4"/></svg>
+          </div>
+          <div>
+            <div style="font-size:10px;letter-spacing:5px;color:#c9bfaa;font-weight:500;">GRUPO</div>
+            <div style="font-size:24px;font-weight:700;letter-spacing:2px;color:#f4f0e8;line-height:1;">ESCRITÓRIO</div>
+          </div>
+        </div>
+        <nav style="display:flex;align-items:center;gap:40px;font-size:15px;font-weight:400;color:#eee7db;">
+          <a href="#home" style="color:#f4f0e8;">Home</a>
+          <a href="#sobre" style="color:#eee7db;">Sobre</a>
+          <a href="#casos" style="color:#eee7db;">Casos</a>
+          <a href="#servicos" style="color:#eee7db;">Serviços</a>
+          <a href="#contato" style="color:#eee7db;">Contato</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:40px;padding:11px 22px;min-width:280px;">
+            <span style="color:#c9bfaa;font-size:15px;">⌕</span>
+            <span style="color:#b7ad99;font-size:14px;">Pesquisar</span>
+          </div>
+          <span style="color:#e9e2d4;font-size:18px;transform:scaleX(-1);">✆</span>
+          <span style="color:#e9e2d4;font-size:20px;line-height:1;">☰</span>
         </div>
       </div>
-    </div>
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
-    </div>
-  </section>
 
-  <!-- ===== PRÁTICA ===== -->
-  <section id="pratica" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
-    <div class="grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-4">
-        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark sticky top-28">Prática</h2>
-        <p class="text-bone/50 mt-6 text-[12px] hairline uppercase">Art. I — quatro frentes</p>
-      </div>
-      <div class="md:col-span-8 space-y-px">
-        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
-          <div class="flex items-baseline justify-between mb-3">
-            <h3 class="font-display text-2xl text-goldlite">Crimes econômicos</h3>
-            <span class="text-[11px] hairline text-bone/35">i</span>
-          </div>
-          <p class="text-bone/65 leading-relaxed">
-            Defesa em sonegação fiscal, lavagem de dinheiro e gestão
-            fraudulenta. Atuamos desde a fase de inquérito, quando ainda dá para
-            evitar a denúncia.
-          </p>
-        </article>
-        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
-          <div class="flex items-baseline justify-between mb-3">
-            <h3 class="font-display text-2xl text-goldlite">Investigações internas</h3>
-            <span class="text-[11px] hairline text-bone/35">ii</span>
-          </div>
-          <p class="text-bone/65 leading-relaxed">
-            Apuração de fraude e desvio dentro da empresa, com relatório apto a
-            sustentar demissão por justa causa ou acordo de leniência.
-          </p>
-        </article>
-        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
-          <div class="flex items-baseline justify-between mb-3">
-            <h3 class="font-display text-2xl text-goldlite">Colaboração premiada</h3>
-            <span class="text-[11px] hairline text-bone/35">iii</span>
-          </div>
-          <p class="text-bone/65 leading-relaxed">
-            Negociação de acordos de colaboração e delação com o Ministério
-            Público. Medimos cada palavra do anexo antes de assinar.
-          </p>
-        </article>
-        <article class="bg-panel border border-bone/8 p-8 md:p-9 hover:border-gold/40 transition-colors">
-          <div class="flex items-baseline justify-between mb-3">
-            <h3 class="font-display text-2xl text-goldlite">Compliance criminal</h3>
-            <span class="text-[11px] hairline text-bone/35">iv</span>
-          </div>
-          <p class="text-bone/65 leading-relaxed">
-            Programas de integridade sob a Lei Anticorrupção e treinamento de
-            diretoria. Prevenção documentada vale mais que defesa tardia.
-          </p>
-        </article>
+      <!-- hero copy -->
+      <div style="position:relative;z-index:5;max-width:1360px;margin:0 auto;padding:0 60px;">
+        <div style="padding-top:130px;max-width:640px;">
+          <h1 style="font-weight:600;font-size:60px;line-height:1.08;color:#f6f2ea;">Advocacia e Soluções:<br><span style="color:#c1ad78;font-weight:500;">Seu Advogado</span></h1>
+          <p style="font-size:16px;line-height:1.75;color:#c8bfae;margin-top:30px;max-width:600px;">No nosso escritório, suas necessidades legais são o centro de tudo o que fazemos. Com uma equipe de advogados altamente experientes e especializados, estamos comprometidos em oferecer soluções jurídicas completas e personalizadas, sempre focadas em atender às especificidades de cada cliente.</p>
+          <a href="#contato" style="display:inline-block;background:rgba(190,170,120,.28);border:1px solid rgba(190,170,120,.6);color:#f2ead9;font-weight:500;font-size:15px;padding:15px 34px;border-radius:40px;margin-top:36px;">Fale Conosco</a>
+        </div>
+        <div style="height:120px;"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ORIGEM ===== -->
-  <section id="origem" class="border-y border-bone/10">
-    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12 items-center">
-      <div class="md:col-span-5">
-        <div class="placeholder aspect-[4/5] w-full flex items-end p-5">
-          <span class="text-[10px] hairline uppercase text-bone/40">retrato sóbrio · pouca luz</span>
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="sobre" style="background:#fff;padding:70px 60px 40px;">
+    <div style="max-width:1300px;margin:0 auto;display:grid;grid-template-columns:0.5fr 1fr;gap:40px;align-items:start;">
+      <div>
+        <div style="font-size:52px;font-weight:600;color:#c1ad78;line-height:1;">24/7</div>
+        <p style="font-size:15px;line-height:1.6;color:#6f685d;margin-top:18px;max-width:210px;">Serviço 24/7: Pronto para atendê-lo a qualquer hora</p>
+      </div>
+      <div style="display:grid;grid-template-columns:0.85fr 1fr;gap:50px;align-items:center;">
+        <div style="position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#f3efe6,transparent 70%);">
+          <span style="font-family:monospace;font-size:12px;color:#8a8272;background:rgba(0,0,0,.05);padding:6px 12px;border-radius:6px;">foto — balança da justiça</span>
+        </div>
+        <div>
+          <h2 style="font-size:44px;font-weight:600;line-height:1.12;color:#2f2b26;">Nossa ampla<br><span style="color:#c1ad78;">experiência jurídica</span></h2>
+          <p style="font-size:15px;line-height:1.75;color:#8a8478;margin-top:24px;max-width:460px;">Com quase três décadas de atuação no mercado, o nosso escritório de Advocacia e Soluções acumula uma ampla experiência jurídica que nos posiciona entre os escritórios mais respeitados da América Latina. Desde 1995, temos combinado conhecimento técnico, inovação e um profundo entendimento das complexidades do Direito, atendendo clientes nacionais e internacionais em diversas áreas.</p>
+          <div style="display:flex;gap:50px;margin-top:34px;">
+            <sc-for list="{{ expertise }}" as="e" hint-placeholder-count="2">
+              <div style="display:flex;align-items:center;gap:14px;">
+                <div style="width:44px;height:44px;border-radius:50%;background:#efe9dc;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:18px;">{{ e.icon }}</div>
+                <div style="font-size:15px;font-weight:500;color:#4a453d;line-height:1.3;">{{ e.label }}</div>
+              </div>
+            </sc-for>
+          </div>
         </div>
       </div>
-      <div class="md:col-span-7">
-        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark mb-8">Origem</h2>
-        <p class="text-bone/70 text-lg leading-relaxed mb-6 max-w-xl">
-          Adriano Maranhão foi promotor de Justiça por onze anos antes de passar
-          à defesa. Conhece a acusação de dentro — sabe onde ela costuma
-          apressar a tese.
-        </p>
-        <p class="text-bone/60 leading-relaxed mb-10 max-w-xl">
-          O escritório trabalha por indicação e não divulga a lista de clientes.
-          A reputação que interessa é a que circula entre pares, não a que
-          aparece em ranking.
-        </p>
-        <div class="grid grid-cols-3 gap-6 max-w-lg">
-          <div class="border-t border-gold pt-4">
-            <p class="font-display text-4xl text-goldlite">11</p>
-            <p class="text-[11px] hairline uppercase text-bone/45 mt-2">anos no MP</p>
-          </div>
-          <div class="border-t border-gold pt-4">
-            <p class="font-display text-4xl text-goldlite">18</p>
-            <p class="text-[11px] hairline uppercase text-bone/45 mt-2">anos na defesa</p>
-          </div>
-          <div class="border-t border-gold pt-4">
-            <p class="font-display text-4xl text-goldlite">∅</p>
-            <p class="text-[11px] hairline uppercase text-bone/45 mt-2">publicidade de casos</p>
-          </div>
+    </div>
+
+    <!-- stats + cards row -->
+    <div style="max-width:1300px;margin:60px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;">
+      <div>
+        <div style="display:flex;gap:26px;">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+            <div style="flex:1;aspect-ratio:1/1;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+              <div style="font-size:34px;font-weight:700;color:#4a453d;line-height:1;">{{ s.value }}</div>
+              <div style="font-size:13px;color:#8a8478;margin-top:8px;line-height:1.3;">{{ s.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <a href="#servicos" style="display:flex;align-items:center;justify-content:space-between;border:1.5px solid #ddd3ba;border-radius:40px;padding:14px 14px 14px 34px;margin-top:34px;color:#4a453d;font-size:16px;font-weight:400;">
+          Descubra mais sobre nossos advogados
+          <span style="width:44px;height:44px;border-radius:50%;background:#b3a06b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;">›</span>
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:0.85fr 1fr;gap:22px;">
+        <div style="background:#f5f2eb;border-radius:14px;padding:22px;display:flex;flex-direction:column;">
+          <span style="align-self:flex-start;background:#eae4d5;color:#8a8272;font-size:13px;padding:6px 18px;border-radius:30px;">Justiça</span>
+          <div style="margin:18px auto 0;width:120px;height:120px;border-radius:8px;background:repeating-linear-gradient(135deg,#ded5c2,#ded5c2 8px,#d2c8b2 8px,#d2c8b2 16px);display:flex;align-items:center;justify-content:center;text-align:center;font-family:monospace;font-size:10px;color:#7a7160;padding:8px;">foto — martelo</div>
+          <p style="text-align:center;font-size:15px;color:#8a8478;margin-top:18px;line-height:1.4;">Garantir a igualdade e a justiça</p>
+        </div>
+        <div style="position:relative;border-radius:14px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);min-height:260px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:5px 10px;border-radius:5px;">foto — advogado à mesa</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROVAS / DEPOIMENTO ===== -->
-  <section id="provas" class="mx-auto max-w-6xl px-6 py-20 md:py-28">
-    <div class="grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-4">
-        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark">Provas</h2>
-        <p class="text-bone/50 mt-6 text-[12px] hairline uppercase">Art. III — o que dizem</p>
+  <!-- ============ TEAM ============ -->
+  <section style="background:#fff;padding:80px 60px 30px;">
+    <div style="text-align:center;max-width:900px;margin:0 auto;">
+      <h2 style="font-size:52px;font-weight:600;color:#2f2b26;">Nossos <span style="color:#c1ad78;">advogados</span></h2>
+      <p style="font-size:15px;line-height:1.7;color:#9a9284;margin-top:18px;">Contamos com uma equipe de advogados altamente qualificados e dedicados, com vasta experiência nas mais diversas áreas do Direito. Cada membro da nossa equipe é cuidadosamente selecionado, não apenas por sua excelência acadêmica e prática, mas também por sua capacidade de entender as necessidades individuais de nossos clientes e fornecer soluções jurídicas inovadoras e eficazes.</p>
+    </div>
+
+    <div style="max-width:1360px;margin:50px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:26px;">
+      <sc-for list="{{ team }}" as="m" hint-placeholder-count="5">
+        <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
+          <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
+          </div>
+          <div style="background:#33302b;padding:16px 18px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div style="font-family:'Poppins',serif;font-weight:500;font-size:17px;color:#e9e2d4;">{{ m.name }}</div>
+              <span style="color:#c1ad78;font-size:15px;">✔</span>
+            </div>
+            <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">{{ m.role }}</div>
+            <div style="display:flex;gap:9px;margin-top:14px;">
+              <sc-for list="{{ m.socials }}" as="ic" hint-placeholder-count="4">
+                <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">{{ ic }}</div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;justify-content:center;gap:14px;margin-top:32px;">
+      <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:15px;cursor:pointer;">‹</div>
+      <div style="width:44px;height:44px;border-radius:50%;background:#b3a06b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;">›</div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="servicos" style="background:#fff;padding:60px 60px 90px;">
+    <div style="max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <div style="font-size:26px;font-weight:600;color:#c1ad78;">Serviços</div>
+        <h2 style="font-size:52px;font-weight:600;line-height:1.1;color:#2f2b26;margin-top:6px;">Áreas de<br><span style="color:#c1ad78;">Atendimento</span></h2>
+        <div style="margin-top:46px;">
+          <sc-for list="{{ areas }}" as="a" hint-placeholder-count="6">
+            <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;">
+              <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">{{ a.icon }}</div>
+              <div style="font-size:20px;font-weight:400;color:#3a352d;">{{ a.name }}</div>
+            </div>
+          </sc-for>
+        </div>
       </div>
-      <div class="md:col-span-8">
-        <figure class="border-t border-bone/15 py-10">
-          <blockquote class="font-display text-2xl md:text-[1.9rem] leading-snug text-bone/90">
-            “A investigação foi arquivada antes da denúncia. Nunca houve
-            audiência, nunca houve manchete. Era exatamente o que eu precisava
-            que não acontecesse.”
-          </blockquote>
-          <figcaption class="mt-6 text-[12px] hairline uppercase text-gold">
-            Diretor-presidente · grupo do agronegócio
-          </figcaption>
-        </figure>
-        <figure class="border-t border-bone/15 py-10">
-          <blockquote class="font-display text-2xl md:text-[1.9rem] leading-snug text-bone/90">
-            “Explicou cada risco sem suavizar. Preferi a verdade dura à
-            promessa fácil — e ela se confirmou no melhor cenário possível.”
-          </blockquote>
-          <figcaption class="mt-6 text-[12px] hairline uppercase text-gold">
-            Sócia · construtora de médio porte
-          </figcaption>
-        </figure>
+      <div style="position:relative;aspect-ratio:1/1.15;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 55% 45%,#eef1f0,transparent 72%);">
+        <span style="font-family:monospace;font-size:12px;color:#8a8272;background:rgba(0,0,0,.05);padding:6px 12px;border-radius:6px;">foto — estátua da justiça (clara)</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== ACESSO / CONTATO ===== -->
-  <section id="acesso" class="border-t border-bone/10">
-    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
-      <div class="md:col-span-5">
-        <h2 class="font-display text-5xl md:text-6xl text-bone wordmark mb-8">Acesso</h2>
-        <p class="text-bone/65 leading-relaxed mb-10 max-w-md">
-          O atendimento começa por uma conversa reservada, por telefone ou
-          pessoalmente. Nada é registrado por escrito antes de firmarmos o
-          sigilo profissional.
-        </p>
-        <dl class="space-y-5 text-[14px]">
-          <div>
-            <dt class="text-[11px] hairline uppercase text-gold mb-1">Escritório</dt>
-            <dd class="text-bone/80">R. Joaquim Floriano, 820 · 14º andar · Itaim Bibi · São Paulo</dd>
-          </div>
-          <div>
-            <dt class="text-[11px] hairline uppercase text-gold mb-1">Linha direta</dt>
-            <dd class="text-bone/80">+55 (11) 3168-4500</dd>
-          </div>
-          <div>
-            <dt class="text-[11px] hairline uppercase text-gold mb-1">E-mail</dt>
-            <dd class="text-bone/80"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="650204070c0b001100250401170c040b0a080417040b0d040a4b0401134b0717">[email&#160;protected]</a></dd>
-          </div>
-        </dl>
+  <!-- ============ TESTIMONIAL ============ -->
+  <section id="casos" style="background:#fff;padding:20px 60px 40px;">
+    <div style="max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <div style="font-family:Georgia,serif;font-size:110px;line-height:.6;color:#e6e0d4;height:70px;">&ldquo;</div>
+        <h2 style="font-size:52px;font-weight:600;line-height:1.1;color:#2f2b26;margin-top:10px;">Relatos dos<br>nossos <span style="color:#c1ad78;">Clientes</span></h2>
       </div>
-
-      <div class="md:col-span-7">
-        <form class="bg-panel border border-bone/10 p-8 md:p-10 space-y-6" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formOk').classList.remove('hidden');">
-          <div class="grid sm:grid-cols-2 gap-6">
-            <label class="block">
-              <span class="text-[11px] hairline uppercase text-bone/50">Nome</span>
-              <input type="text" required class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none" />
-            </label>
-            <label class="block">
-              <span class="text-[11px] hairline uppercase text-bone/50">Telefone</span>
-              <input type="text" required class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none" />
-            </label>
-          </div>
-          <label class="block">
-            <span class="text-[11px] hairline uppercase text-bone/50">Melhor horário para contato</span>
-            <input type="text" class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none" />
-          </label>
-          <label class="block">
-            <span class="text-[11px] hairline uppercase text-bone/50">Assunto, em uma linha</span>
-            <textarea rows="3" required class="mt-2 w-full border-b border-bone/25 bg-transparent py-2 text-bone focus:border-gold focus:outline-none resize-none"></textarea>
-          </label>
-          <div class="flex items-center gap-6 pt-1">
-            <button type="submit" class="inline-flex items-center h-11 px-8 bg-gold text-void text-[12px] font-600 hairline uppercase hover:bg-goldlite transition-colors">Solicitar contato</button>
-            <p id="formOk" class="hidden text-[12px] text-goldlite">Recebido. Ligamos de volta em sigilo.</p>
-          </div>
-        </form>
+      <div style="text-align:center;">
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+          <sc-for list="{{ avatars }}" as="av" hint-placeholder-count="5">
+            <div style="width:{{ av.size }};height:{{ av.size }};border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
+          </sc-for>
+        </div>
+        <div style="font-size:20px;font-weight:600;color:#2f2b26;margin-top:20px;">NOME SOBRENOME</div>
+        <div style="font-size:14px;color:#9a9284;margin-top:2px;">Cliente</div>
+        <div style="color:#d8b93f;font-size:20px;letter-spacing:3px;margin-top:12px;">★★★★★</div>
+        <p style="font-size:15px;line-height:1.75;color:#7a7365;max-width:420px;margin:16px auto 0;">Mais do que um escritório de advocacia, encontrei um verdadeiro parceiro. Eles me orientaram em um momento difícil com empatia e profissionalismo, sempre buscando a melhor solução para o meu caso.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="border-t border-bone/10">
-    <div class="mx-auto max-w-6xl px-6 py-14 grid md:grid-cols-12 gap-8 items-start">
-      <div class="md:col-span-5">
-        <p class="font-display text-2xl text-bone wordmark mb-3">Adriano Maranhão</p>
-        <p class="text-sm text-bone/55 leading-relaxed max-w-xs">
-          Advocacia criminal empresarial · atuação nacional · OAB/SP 92.077
-        </p>
+  <!-- ============ CONTACT ============ -->
+  <section id="contato" style="background:#fff;padding:60px 60px 90px;">
+    <div style="max-width:1300px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;">
+      <div style="position:relative;">
+        <div style="position:absolute;right:-18px;bottom:-18px;top:34px;left:34px;background:#c1ad78;border-radius:20px 20px 90px 20px;"></div>
+        <div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:1/0.82;background:repeating-linear-gradient(135deg,#d3ccc0,#d3ccc0 12px,#c7bfb0 12px,#c7bfb0 24px);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:12px;color:#6f6858;background:rgba(255,255,255,.6);padding:6px 12px;border-radius:6px;">foto — reunião com cliente</span>
+        </div>
       </div>
-      <div class="md:col-span-3">
-        <p class="text-[11px] hairline uppercase text-gold mb-4">Seções</p>
-        <ul class="space-y-2 text-sm text-bone/60">
-          <li><a href="#pratica" class="hover:text-goldlite transition-colors">Prática</a></li>
-          <li><a href="#origem" class="hover:text-goldlite transition-colors">Origem</a></li>
-          <li><a href="#provas" class="hover:text-goldlite transition-colors">Provas</a></li>
-          <li><a href="#acesso" class="hover:text-goldlite transition-colors">Acesso</a></li>
-        </ul>
-      </div>
-      <div class="md:col-span-4">
-        <p class="text-[11px] hairline uppercase text-gold mb-4">Aviso</p>
-        <p class="text-sm text-bone/55 leading-relaxed">
-          Conteúdo informativo, conforme o Provimento 205/2021 da OAB. Não há
-          oferta de serviços, captação de clientela nem garantia de resultado.
-        </p>
+      <div>
+        <h2 style="font-size:52px;font-weight:600;line-height:1.1;color:#2f2b26;">Fale com um<br><span style="color:#c1ad78;">advogado</span> hoje</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;">
+          <input placeholder="Primeiro nome" style="border:1.5px solid #e2ddd2;border-radius:40px;padding:16px 26px;font-size:14px;color:#4a453d;" />
+          <input placeholder="Sobrenome" style="border:1.5px solid #e2ddd2;border-radius:40px;padding:16px 26px;font-size:14px;color:#4a453d;" />
+          <input placeholder="Email" style="border:1.5px solid #e2ddd2;border-radius:40px;padding:16px 26px;font-size:14px;color:#4a453d;" />
+          <input placeholder="Celular" style="border:1.5px solid #e2ddd2;border-radius:40px;padding:16px 26px;font-size:14px;color:#4a453d;" />
+          <textarea placeholder="Descrição" rows="4" style="grid-column:1/3;border:1.5px solid #e2ddd2;border-radius:24px;padding:18px 26px;font-size:14px;color:#4a453d;resize:none;"></textarea>
+        </div>
+        <button style="background:#b3a06b;color:#fff;font-weight:400;font-size:15px;border:none;border-radius:40px;padding:15px 46px;margin-top:22px;cursor:pointer;">Enviar</button>
       </div>
     </div>
-    <div class="border-t border-bone/10">
-      <div class="mx-auto max-w-6xl px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-[12px] text-bone/40">
-        <span>© 2008–2026 Adriano Maranhão Advocacia</span>
-        <span>São Paulo · Brasil</span>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#33302b;color:#c9c2b4;padding:64px 60px 30px;">
+    <div style="max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:40px;">
+      <div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+          <svg viewBox="0 0 48 40" width="52" height="44" fill="none"><path d="M24 3 44 14H4z" fill="#e9e2d4"/><rect x="9" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="17" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="27" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="35" y="17" width="4" height="16" fill="#e9e2d4"/><rect x="4" y="35" width="40" height="4" fill="#e9e2d4"/></svg>
+          <div style="font-size:13px;letter-spacing:2px;color:#e9e2d4;font-weight:600;">GRUPO ESCRITÓRIO</div>
+          <div style="font-size:9px;letter-spacing:3px;color:#8f887a;">ADVOCACIA E SOLUÇÕES</div>
+        </div>
+        <div style="font-size:22px;font-weight:600;color:#e9e2d4;margin-top:18px;">(00) 0000-0000</div>
+        <p style="font-size:14px;line-height:1.6;color:#a49c8c;margin-top:12px;">Av. Exemplo, 1.000<br>Andar 10 — Bairro — Cidade - UF</p>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:600;color:#e9e2d4;margin-bottom:22px;">Menu</div>
+        <sc-for list="{{ colMenu }}" as="l" hint-placeholder-count="4">
+          <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">{{ l }}</a>
+        </sc-for>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:600;color:#e9e2d4;margin-bottom:22px;">Ajuda</div>
+        <sc-for list="{{ colHelp }}" as="l" hint-placeholder-count="3">
+          <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">{{ l }}</a>
+        </sc-for>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:600;color:#e9e2d4;margin-bottom:22px;">Recursos</div>
+        <sc-for list="{{ colRes }}" as="l" hint-placeholder-count="4">
+          <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">{{ l }}</a>
+        </sc-for>
+      </div>
+    </div>
+    <div style="max-width:1300px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <div style="font-size:13.5px;color:#8f887a;">© Nosso Escritório Advocacia e Soluções — Todos os direitos reservados</div>
+      <div style="display:flex;gap:12px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#c9c2b4;font-size:12px;">X</div>
+        <div style="width:30px;height:30px;border-radius:50%;background:#b3a06b;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;">f</div>
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#c9c2b4;font-size:13px;">◎</div>
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#c9c2b4;font-size:12px;">◈</div>
       </div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    document.getElementById('menuBtn').addEventListener('click', function () {
-      var nav = document.getElementById('mobileNav');
-      nav.classList.toggle('hidden');
-      nav.classList.toggle('flex');
-    });
-    document.querySelectorAll('#mobileNav a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        var nav = document.getElementById('mobileNav');
-        nav.classList.add('hidden');
-        nav.classList.remove('flex');
-      });
-    });
-  </script>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      expertise: [
+        { icon: "▤", label: "Assuntos Jurídicos Corporativos" },
+        { icon: "♿", label: "Lei de Danos Pessoais" },
+      ],
+      stats: [
+        { value: "+200", label: "Casos por ano" },
+        { value: "65%", label: "Veredictos favoráveis" },
+        { value: "90%", label: "Satisfação do cliente" },
+      ],
+      team: [
+        { name: "NOME SOBRENOME", role: "Direito Familiar", socials: ["f", "t", "◎", "▶"] },
+        { name: "NOME SOBRENOME", role: "Direito Imobiliário", socials: ["f", "t", "◎", "▶"] },
+        { name: "NOME SOBRENOME", role: "Direito Civil", socials: ["f", "t", "◎", "▶"] },
+        { name: "NOME SOBRENOME", role: "Direito Tributário", socials: ["f", "t", "◎", "▶"] },
+        { name: "NOME SOBRENOME", role: "Direito Tributário", socials: ["f", "t", "◎", "▶"] },
+      ],
+      areas: [
+        { icon: "▤", name: "Direito Imobiliário" },
+        { icon: "⚒", name: "Direito Trabalhista" },
+        { icon: "⇄", name: "Direito Civil" },
+        { icon: "☺", name: "Direito do Consumidor" },
+        { icon: "▣", name: "Direito Tributário" },
+        { icon: "♟", name: "Direito Familiar" },
+      ],
+      avatars: [
+        { size: "48px" }, { size: "56px" }, { size: "74px" }, { size: "56px" }, { size: "48px" },
+      ],
+      colMenu: ["Sobre", "Casos", "Serviços", "Contato"],
+      colHelp: ["Suporte ao cliente", "Termos e Condições", "Política de Privacidade"],
+      colRes: ["Consulta gratuita", "Advogado de contato gratuito", "Nosso Blog", "Resolução de caso"],
+    };
+  }
+}
+</script>
 </body>
 </html>
