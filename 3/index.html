@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Advocacia Previdenciária</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,8 +14,17 @@
   a:hover{color:#dcab63}
   ::selection{background:#c8944a;color:#17120e}
   input::placeholder,textarea::placeholder{color:#8a7c68}
+  summary{list-style:none;cursor:pointer}
+  summary::-webkit-details-marker{display:none}
+  .faq-item{border:1px solid #e6e0d6;border-radius:12px;overflow:hidden;background:#fff}
+  .faq-item .faq-q{font-family:'Playfair Display',serif;font-weight:600;font-size:20px;color:#211b14}
+  .faq-item .faq-ar{font-size:14px;color:#211b14;transition:transform .2s}
+  .faq-item[open]{background:#c8944a}
+  .faq-item[open] .faq-q{color:#fff}
+  .faq-item[open] .faq-ar{color:#fff;transform:rotate(180deg)}
 </style>
-</helmet>
+</head>
+<body>
 <div style="background:#fafafa;overflow:hidden;">
 
   <!-- ============ HERO ============ -->
@@ -83,12 +88,11 @@
   <section style="background:#fafafa;padding:76px 56px;">
     <p style="text-align:center;color:#c8944a;font-weight:600;font-size:14px;letter-spacing:.4px;">Atuação em Direito Previdenciário</p>
     <div style="max-width:1180px;margin:44px auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;">
-      <sc-for list="{{ logos }}" as="logo" hint-placeholder-count="5">
-        <div style="display:flex;align-items:center;gap:12px;opacity:.7;">
-          <div style="width:34px;height:34px;border-radius:8px;background:repeating-linear-gradient(135deg,#e6c894,#e6c894 4px,#d8b676 4px,#d8b676 8px);"></div>
-          <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#4a4238;">{{ logo }}</span>
-        </div>
-      </sc-for>
+      <div style="display:flex;align-items:center;gap:12px;opacity:.7;"><div style="width:34px;height:34px;border-radius:8px;background:repeating-linear-gradient(135deg,#e6c894,#e6c894 4px,#d8b676 4px,#d8b676 8px);"></div><span style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#4a4238;">Aposentadorias</span></div>
+      <div style="display:flex;align-items:center;gap:12px;opacity:.7;"><div style="width:34px;height:34px;border-radius:8px;background:repeating-linear-gradient(135deg,#e6c894,#e6c894 4px,#d8b676 4px,#d8b676 8px);"></div><span style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#4a4238;">Auxílio-Doença</span></div>
+      <div style="display:flex;align-items:center;gap:12px;opacity:.7;"><div style="width:34px;height:34px;border-radius:8px;background:repeating-linear-gradient(135deg,#e6c894,#e6c894 4px,#d8b676 4px,#d8b676 8px);"></div><span style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#4a4238;">BPC / LOAS</span></div>
+      <div style="display:flex;align-items:center;gap:12px;opacity:.7;"><div style="width:34px;height:34px;border-radius:8px;background:repeating-linear-gradient(135deg,#e6c894,#e6c894 4px,#d8b676 4px,#d8b676 8px);"></div><span style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#4a4238;">Pensão por Morte</span></div>
+      <div style="display:flex;align-items:center;gap:12px;opacity:.7;"><div style="width:34px;height:34px;border-radius:8px;background:repeating-linear-gradient(135deg,#e6c894,#e6c894 4px,#d8b676 4px,#d8b676 8px);"></div><span style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;color:#4a4238;">Revisões</span></div>
     </div>
   </section>
 
@@ -130,29 +134,49 @@
     </div>
 
     <div style="max-width:1180px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
-      <sc-for list="{{ bigServices }}" as="s" hint-placeholder-count="2">
-        <div style="position:relative;aspect-ratio:16/9.2;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
-          <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">{{ s.img }}</span>
-          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.92) 6%,rgba(15,11,8,.2) 55%);"></div>
-          <div style="position:absolute;left:32px;right:32px;bottom:30px;">
-            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;">{{ s.title }}</h3>
-            <p style="font-size:14px;line-height:1.6;color:#c2b8a5;margin-top:10px;max-width:340px;">{{ s.desc }}</p>
-          </div>
+      <div style="position:relative;aspect-ratio:16/9.2;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
+        <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — aposentadoria</span>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.92) 6%,rgba(15,11,8,.2) 55%);"></div>
+        <div style="position:absolute;left:32px;right:32px;bottom:30px;">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;">Aposentadorias</h3>
+          <p style="font-size:14px;line-height:1.6;color:#c2b8a5;margin-top:10px;max-width:340px;">Orientação e análise para requerimentos de aposentadoria conforme a situação previdenciária de cada cliente.</p>
         </div>
-      </sc-for>
+      </div>
+      <div style="position:relative;aspect-ratio:16/9.2;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
+        <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — atendimento</span>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.92) 6%,rgba(15,11,8,.2) 55%);"></div>
+        <div style="position:absolute;left:32px;right:32px;bottom:30px;">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;">Benefícios por Incapacidade</h3>
+          <p style="font-size:14px;line-height:1.6;color:#c2b8a5;margin-top:10px;max-width:340px;">Atuação em casos relacionados a benefícios decorrentes de incapacidade para o trabalho.</p>
+        </div>
+      </div>
     </div>
 
     <div style="max-width:1180px;margin:24px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-      <sc-for list="{{ smallServices }}" as="s" hint-placeholder-count="3">
-        <div style="position:relative;aspect-ratio:1/1.05;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
-          <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">{{ s.img }}</span>
-          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.94) 10%,rgba(15,11,8,.15) 60%);"></div>
-          <div style="position:absolute;left:26px;right:26px;bottom:28px;">
-            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:#f4f0ea;">{{ s.title }}</h3>
-            <p style="font-size:13.5px;line-height:1.6;color:#c2b8a5;margin-top:9px;">{{ s.desc }}</p>
-          </div>
+      <div style="position:relative;aspect-ratio:1/1.05;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
+        <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — idoso / cuidado</span>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.94) 10%,rgba(15,11,8,.15) 60%);"></div>
+        <div style="position:absolute;left:26px;right:26px;bottom:28px;">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:#f4f0ea;">BPC / LOAS</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#c2b8a5;margin-top:9px;">Orientação no Benefício de Prestação Continuada para idosos e pessoas com deficiência.</p>
         </div>
-      </sc-for>
+      </div>
+      <div style="position:relative;aspect-ratio:1/1.05;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
+        <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — documentos</span>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.94) 10%,rgba(15,11,8,.15) 60%);"></div>
+        <div style="position:absolute;left:26px;right:26px;bottom:28px;">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:#f4f0ea;">Pensão por Morte</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#c2b8a5;margin-top:9px;">Requerimento e defesa do direito à pensão por morte junto ao INSS.</p>
+        </div>
+      </div>
+      <div style="position:relative;aspect-ratio:1/1.05;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#2c2318,#2c2318 12px,#241c12 12px,#241c12 24px);">
+        <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — análise</span>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.94) 10%,rgba(15,11,8,.15) 60%);"></div>
+        <div style="position:absolute;left:26px;right:26px;bottom:28px;">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:#f4f0ea;">Planejamento &amp; Revisões</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#c2b8a5;margin-top:9px;">Planejamento previdenciário e revisão de benefícios em busca do melhor resultado.</p>
+        </div>
+      </div>
     </div>
 
     <div style="text-align:center;margin-top:44px;">
@@ -173,34 +197,76 @@
         </div>
       </div>
       <div>
-        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
-          <div style="display:grid;grid-template-columns:auto 1fr;gap:26px;padding-bottom:34px;">
-            <div style="display:flex;flex-direction:column;align-items:center;">
-              <div style="width:46px;height:46px;border-radius:50%;background:#c8944a;color:#17120e;font-family:'Playfair Display',serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;">{{ st.n }}</div>
-              <sc-if value="{{ st.line }}" hint-placeholder-val="{{ true }}"><div style="flex:1;width:1px;background:#e3ddd2;margin-top:8px;min-height:44px;"></div></sc-if>
-            </div>
-            <div style="padding-top:6px;">
-              <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#211b14;">{{ st.title }}</h3>
-              <p style="font-size:14.5px;line-height:1.65;color:#6b6459;margin-top:10px;max-width:430px;">{{ st.desc }}</p>
-            </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:26px;padding-bottom:34px;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:46px;height:46px;border-radius:50%;background:#c8944a;color:#17120e;font-family:'Playfair Display',serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;">1</div>
+            <div style="flex:1;width:1px;background:#e3ddd2;margin-top:8px;min-height:44px;"></div>
           </div>
-        </sc-for>
+          <div style="padding-top:6px;">
+            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#211b14;">Contato</h3>
+            <p style="font-size:14.5px;line-height:1.65;color:#6b6459;margin-top:10px;max-width:430px;">Você conta a sua situação e envia as informações iniciais para uma primeira avaliação.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:26px;padding-bottom:34px;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:46px;height:46px;border-radius:50%;background:#c8944a;color:#17120e;font-family:'Playfair Display',serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;">2</div>
+            <div style="flex:1;width:1px;background:#e3ddd2;margin-top:8px;min-height:44px;"></div>
+          </div>
+          <div style="padding-top:6px;">
+            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#211b14;">Análise</h3>
+            <p style="font-size:14.5px;line-height:1.65;color:#6b6459;margin-top:10px;max-width:430px;">Seu caso e os documentos disponíveis são avaliados individualmente pela equipe.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:26px;padding-bottom:34px;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:46px;height:46px;border-radius:50%;background:#c8944a;color:#17120e;font-family:'Playfair Display',serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;">3</div>
+            <div style="flex:1;width:1px;background:#e3ddd2;margin-top:8px;min-height:44px;"></div>
+          </div>
+          <div style="padding-top:6px;">
+            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#211b14;">Orientação</h3>
+            <p style="font-size:14.5px;line-height:1.65;color:#6b6459;margin-top:10px;max-width:430px;">Você recebe orientações claras sobre os caminhos possíveis para o seu caso.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:26px;padding-bottom:34px;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:46px;height:46px;border-radius:50%;background:#c8944a;color:#17120e;font-family:'Playfair Display',serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center;">4</div>
+          </div>
+          <div style="padding-top:6px;">
+            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#211b14;">Acompanhamento</h3>
+            <p style="font-size:14.5px;line-height:1.65;color:#6b6459;margin-top:10px;max-width:430px;">Quando aplicável, conduzimos e acompanhamos o pedido em cada etapa.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ GALERIA / ATENDIMENTO ============ -->
   <section style="background:#17120e;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(300px,auto));">
-    <sc-for list="{{ cases }}" as="c" hint-placeholder-count="5">
-      <div style="position:relative;min-height:320px;overflow:hidden;background:repeating-linear-gradient(135deg,#2a2116,#2a2116 14px,#211a11 14px,#211a11 28px);grid-column:{{ c.span }};">
-        <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">{{ c.img }}</span>
-        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.9) 8%,rgba(15,11,8,.1) 60%);"></div>
-        <div style="position:absolute;left:30px;bottom:34px;">
-          <div style="font-size:14px;font-weight:600;color:#c8944a;">{{ c.year }}</div>
-          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;margin-top:6px;">{{ c.title }}</h3>
-        </div>
-      </div>
-    </sc-for>
+    <div style="position:relative;min-height:320px;overflow:hidden;background:repeating-linear-gradient(135deg,#2a2116,#2a2116 14px,#211a11 14px,#211a11 28px);">
+      <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — atendimento online</span>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.9) 8%,rgba(15,11,8,.1) 60%);"></div>
+      <div style="position:absolute;left:30px;bottom:34px;"><div style="font-size:14px;font-weight:600;color:#c8944a;">Online</div><h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;margin-top:6px;">Atendimento à distância</h3></div>
+    </div>
+    <div style="position:relative;min-height:320px;overflow:hidden;background:repeating-linear-gradient(135deg,#2a2116,#2a2116 14px,#211a11 14px,#211a11 28px);">
+      <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — documentos</span>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.9) 8%,rgba(15,11,8,.1) 60%);"></div>
+      <div style="position:absolute;left:30px;bottom:34px;"><div style="font-size:14px;font-weight:600;color:#c8944a;">INSS</div><h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;margin-top:6px;">Requerimentos e recursos</h3></div>
+    </div>
+    <div style="position:relative;min-height:320px;overflow:hidden;background:repeating-linear-gradient(135deg,#2a2116,#2a2116 14px,#211a11 14px,#211a11 28px);">
+      <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — análise</span>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.9) 8%,rgba(15,11,8,.1) 60%);"></div>
+      <div style="position:absolute;left:30px;bottom:34px;"><div style="font-size:14px;font-weight:600;color:#c8944a;">CNIS</div><h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;margin-top:6px;">Análise do histórico</h3></div>
+    </div>
+    <div style="position:relative;min-height:320px;overflow:hidden;background:repeating-linear-gradient(135deg,#2a2116,#2a2116 14px,#211a11 14px,#211a11 28px);">
+      <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — arquivo</span>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.9) 8%,rgba(15,11,8,.1) 60%);"></div>
+      <div style="position:absolute;left:30px;bottom:34px;"><div style="font-size:14px;font-weight:600;color:#c8944a;">Documentos</div><h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;margin-top:6px;">Organização do caso</h3></div>
+    </div>
+    <div style="position:relative;min-height:320px;overflow:hidden;background:repeating-linear-gradient(135deg,#2a2116,#2a2116 14px,#211a11 14px,#211a11 28px);grid-column:span 2;">
+      <span style="position:absolute;top:14px;right:14px;font-family:monospace;font-size:11px;color:#8a7860;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:5px;">foto — reunião</span>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,8,.9) 8%,rgba(15,11,8,.1) 60%);"></div>
+      <div style="position:absolute;left:30px;bottom:34px;"><div style="font-size:14px;font-weight:600;color:#c8944a;">Acompanhamento</div><h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:26px;color:#f4f0ea;margin-top:6px;">Em cada etapa do processo</h3></div>
+    </div>
   </section>
 
   <!-- ============ PROVA SOCIAL ============ -->
@@ -263,17 +329,22 @@
       <h2 style="font-family:'Playfair Display',serif;font-weight:600;font-size:50px;line-height:1.12;color:#211b14;margin-top:12px;">Respostas <em style="font-style:italic;">Diretas</em> às<br>Perguntas Frequentes</h2>
     </div>
     <div style="max-width:840px;margin:52px auto 0;display:flex;flex-direction:column;gap:16px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
-        <div style="border:1px solid #e6e0d6;border-radius:12px;overflow:hidden;background:{{ f.headBg }};">
-          <div onClick="{{ f.toggle }}" style="display:flex;align-items:center;justify-content:space-between;padding:22px 30px;cursor:pointer;">
-            <span style="font-family:'Playfair Display',serif;font-weight:600;font-size:20px;color:{{ f.qColor }};">{{ f.q }}</span>
-            <span style="font-size:14px;color:{{ f.qColor }};transform:{{ f.rot }};transition:transform .2s;">▼</span>
-          </div>
-          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ true }}">
-            <div style="padding:0 30px 24px;font-size:14.5px;line-height:1.7;color:#6b6459;">{{ f.a }}</div>
-          </sc-if>
-        </div>
-      </sc-for>
+      <details class="faq-item" open>
+        <summary><span class="faq-q">Como saber se tenho direito a um benefício do INSS?</span><span class="faq-ar">▼</span></summary>
+        <div class="faq-a">O direito depende de fatores como tempo de contribuição, idade e a sua situação específica. Na análise inicial, avaliamos o seu histórico previdenciário para indicar quais caminhos podem existir para o seu caso.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Meu benefício foi negado. O que posso fazer?</span><span class="faq-ar">▼</span></summary>
+        <div class="faq-a">Um indeferimento não encerra o processo. É possível analisar o motivo da negativa, verificar pendências no CNIS e avaliar os próximos passos, seja um novo requerimento, recurso administrativo ou a via judicial.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">O atendimento pode ser feito online?</span><span class="faq-ar">▼</span></summary>
+        <div class="faq-a">Sim. Oferecemos atendimento à distância, com envio de documentos e orientações pela internet, com a mesma atenção de um atendimento presencial.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="faq-q">Quais documentos preciso para analisar meu caso?</span><span class="faq-ar">▼</span></summary>
+        <div class="faq-a">Em geral ajudam o CNIS/extrato do INSS, a carteira de trabalho, comprovantes de contribuição e documentos pessoais. Na análise, indicamos exatamente o que é necessário para a sua situação.</div>
+      </details>
     </div>
     <div style="text-align:center;margin-top:40px;">
       <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:#211b14;">Tem mais perguntas?</div>
@@ -294,7 +365,7 @@
           Prefiro falar pelo WhatsApp
         </a>
       </div>
-      <form onSubmit="{{ noop }}" style="background:rgba(20,15,11,.6);border:1px solid rgba(200,148,74,.25);border-radius:16px;padding:36px 34px;display:flex;flex-direction:column;gap:16px;">
+      <form onsubmit="return false" style="background:rgba(20,15,11,.6);border:1px solid rgba(200,148,74,.25);border-radius:16px;padding:36px 34px;display:flex;flex-direction:column;gap:16px;">
         <input placeholder="Nome" style="background:#221a12;border:1px solid #3a2e1e;border-radius:10px;padding:15px 18px;color:#f4f0ea;font-size:14px;font-family:'Mulish',sans-serif;" />
         <input placeholder="WhatsApp" style="background:#221a12;border:1px solid #3a2e1e;border-radius:10px;padding:15px 18px;color:#f4f0ea;font-size:14px;font-family:'Mulish',sans-serif;" />
         <input placeholder="E-mail" style="background:#221a12;border:1px solid #3a2e1e;border-radius:10px;padding:15px 18px;color:#f4f0ea;font-size:14px;font-family:'Mulish',sans-serif;" />
@@ -316,23 +387,29 @@
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:44px;">
-        <sc-for list="{{ posts }}" as="p" hint-placeholder-count="2">
-          <div>
-            <div style="position:relative;aspect-ratio:16/11;border-radius:8px;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c4,#d8d0c4 12px,#cbc2b4 12px,#cbc2b4 24px);display:flex;align-items:center;justify-content:center;">
-              <span style="font-family:monospace;font-size:11px;color:#6b6252;background:rgba(255,255,255,.6);padding:5px 10px;border-radius:5px;">{{ p.img }}</span>
-            </div>
-            <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;line-height:1.25;color:#211b14;margin-top:22px;">{{ p.title }}</h3>
-            <p style="font-size:14px;line-height:1.6;color:#6b6459;margin-top:12px;">{{ p.excerpt }}</p>
-            <a href="#blog" style="display:inline-flex;align-items:center;gap:10px;color:#211b14;font-weight:700;font-size:14px;margin-top:16px;">Ler Mais <span style="font-size:14px;">→</span></a>
+        <div>
+          <div style="position:relative;aspect-ratio:16/11;border-radius:8px;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c4,#d8d0c4 12px,#cbc2b4 12px,#cbc2b4 24px);display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:monospace;font-size:11px;color:#6b6252;background:rgba(255,255,255,.6);padding:5px 10px;border-radius:5px;">foto — atendimento</span>
           </div>
-        </sc-for>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;line-height:1.25;color:#211b14;margin-top:22px;">Como saber se você tem direito a um benefício do INSS</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6b6459;margin-top:12px;">[Espaço reservado para um artigo do escritório sobre direitos previdenciários e benefícios.]</p>
+          <a href="#blog" style="display:inline-flex;align-items:center;gap:10px;color:#211b14;font-weight:700;font-size:14px;margin-top:16px;">Ler Mais <span style="font-size:14px;">→</span></a>
+        </div>
+        <div>
+          <div style="position:relative;aspect-ratio:16/11;border-radius:8px;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c4,#d8d0c4 12px,#cbc2b4 12px,#cbc2b4 24px);display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:monospace;font-size:11px;color:#6b6252;background:rgba(255,255,255,.6);padding:5px 10px;border-radius:5px;">foto — documentos</span>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:22px;line-height:1.25;color:#211b14;margin-top:22px;">Benefício negado? Entenda os próximos passos</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6b6459;margin-top:12px;">[Espaço reservado para um artigo do escritório sobre recursos e indeferimentos.]</p>
+          <a href="#blog" style="display:inline-flex;align-items:center;gap:10px;color:#211b14;font-weight:700;font-size:14px;margin-top:16px;">Ler Mais <span style="font-size:14px;">→</span></a>
+        </div>
 
         <div style="background:#17120e;border-radius:14px;padding:40px 36px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;">
           <div style="width:56px;height:56px;border-radius:50%;border:1px solid rgba(200,148,74,.5);display:flex;align-items:center;justify-content:center;color:#c8944a;font-size:22px;">✉</div>
           <h3 style="font-family:'Playfair Display',serif;font-weight:600;font-size:28px;line-height:1.2;color:#f4f0ea;margin-top:22px;">Receba Orientações<br>sobre seus <em style="font-style:italic;">Direitos</em></h3>
           <p style="font-size:14px;color:#b0a693;margin-top:12px;">Conteúdos sobre benefícios do INSS direto no seu e-mail.</p>
           <input placeholder="Digite seu e-mail" style="width:100%;margin-top:22px;background:#221a12;border:1px solid #3a2e1e;border-radius:30px;padding:14px 22px;color:#f4f0ea;font-size:14px;font-family:'Mulish',sans-serif;" />
-          <button style="width:100%;margin-top:12px;background:#c8944a;color:#17120e;font-weight:700;font-size:15px;border:none;border-radius:30px;padding:14px;cursor:pointer;font-family:'Mulish',sans-serif;">Assinar</button>
+          <button type="button" style="width:100%;margin-top:12px;background:#c8944a;color:#17120e;font-weight:700;font-size:15px;border:none;border-radius:30px;padding:14px;cursor:pointer;font-family:'Mulish',sans-serif;">Assinar</button>
         </div>
       </div>
     </div>
@@ -376,61 +453,5 @@
   </footer>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { openFaq: 0 };
-  noop = (e) => { if (e && e.preventDefault) e.preventDefault(); };
-  renderVals() {
-    const faqData = [
-      { q: "Como saber se tenho direito a um benefício do INSS?", a: "O direito depende de fatores como tempo de contribuição, idade e a sua situação específica. Na análise inicial, avaliamos o seu histórico previdenciário para indicar quais caminhos podem existir para o seu caso." },
-      { q: "Meu benefício foi negado. O que posso fazer?", a: "Um indeferimento não encerra o processo. É possível analisar o motivo da negativa, verificar pendências no CNIS e avaliar os próximos passos, seja um novo requerimento, recurso administrativo ou a via judicial." },
-      { q: "O atendimento pode ser feito online?", a: "Sim. Oferecemos atendimento à distância, com envio de documentos e orientações pela internet, com a mesma atenção de um atendimento presencial." },
-      { q: "Quais documentos preciso para analisar meu caso?", a: "Em geral ajudam o CNIS/extrato do INSS, a carteira de trabalho, comprovantes de contribuição e documentos pessoais. Na análise, indicamos exatamente o que é necessário para a sua situação." },
-    ];
-    const faqs = faqData.map((f, i) => {
-      const open = this.state.openFaq === i;
-      return {
-        q: f.q, a: f.a, open,
-        headBg: open ? "#c8944a" : "#ffffff",
-        qColor: open ? "#ffffff" : "#211b14",
-        rot: open ? "rotate(180deg)" : "rotate(0deg)",
-        toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })),
-      };
-    });
-    return {
-      noop: this.noop,
-      logos: ["Aposentadorias", "Auxílio-Doença", "BPC / LOAS", "Pensão por Morte", "Revisões"],
-      bigServices: [
-        { title: "Aposentadorias", desc: "Orientação e análise para requerimentos de aposentadoria conforme a situação previdenciária de cada cliente.", img: "foto — aposentadoria" },
-        { title: "Benefícios por Incapacidade", desc: "Atuação em casos relacionados a benefícios decorrentes de incapacidade para o trabalho.", img: "foto — atendimento" },
-      ],
-      smallServices: [
-        { title: "BPC / LOAS", desc: "Orientação no Benefício de Prestação Continuada para idosos e pessoas com deficiência.", img: "foto — idoso / cuidado" },
-        { title: "Pensão por Morte", desc: "Requerimento e defesa do direito à pensão por morte junto ao INSS.", img: "foto — documentos" },
-        { title: "Planejamento & Revisões", desc: "Planejamento previdenciário e revisão de benefícios em busca do melhor resultado.", img: "foto — análise" },
-      ],
-      steps: [
-        { n: "1", title: "Contato", desc: "Você conta a sua situação e envia as informações iniciais para uma primeira avaliação.", line: true },
-        { n: "2", title: "Análise", desc: "Seu caso e os documentos disponíveis são avaliados individualmente pela equipe.", line: true },
-        { n: "3", title: "Orientação", desc: "Você recebe orientações claras sobre os caminhos possíveis para o seu caso.", line: true },
-        { n: "4", title: "Acompanhamento", desc: "Quando aplicável, conduzimos e acompanhamos o pedido em cada etapa.", line: false },
-      ],
-      cases: [
-        { year: "Online", title: "Atendimento à distância", img: "foto — atendimento online", span: "auto" },
-        { year: "INSS", title: "Requerimentos e recursos", img: "foto — documentos", span: "auto" },
-        { year: "CNIS", title: "Análise do histórico", img: "foto — análise", span: "auto" },
-        { year: "Documentos", title: "Organização do caso", img: "foto — arquivo", span: "auto" },
-        { year: "Acompanhamento", title: "Em cada etapa do processo", img: "foto — reunião", span: "span 2" },
-      ],
-      faqs,
-      posts: [
-        { title: "Como saber se você tem direito a um benefício do INSS", excerpt: "[Espaço reservado para um artigo do escritório sobre direitos previdenciários e benefícios.]", img: "foto — atendimento" },
-        { title: "Benefício negado? Entenda os próximos passos", excerpt: "[Espaço reservado para um artigo do escritório sobre recursos e indeferimentos.]", img: "foto — documentos" },
-      ],
-    };
-  }
-}
-</script>
 </body>
 </html>

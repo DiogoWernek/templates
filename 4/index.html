@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Advocacia Previdenciária</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,7 +15,8 @@
   input,textarea{font-family:'Poppins',sans-serif}
   ::selection{background:#b3a06b;color:#fff}
 </style>
-</helmet>
+</head>
+<body>
 <div style="background:#fff;overflow:hidden;">
 
   <!-- ============ HERO ============ -->
@@ -85,12 +82,14 @@
           <h2 style="font-size:44px;font-weight:600;line-height:1.12;color:#2f2b26;">Experiência dedicada ao<br><span style="color:#c1ad78;">Direito Previdenciário</span></h2>
           <p style="font-size:15px;line-height:1.75;color:#8a8478;margin-top:24px;max-width:460px;">Atuamos na orientação e defesa de direitos relacionados à Previdência Social, combinando conhecimento técnico e um atendimento próximo às particularidades de cada caso. Nosso foco está em orientar você com clareza sobre os benefícios do INSS e o planejamento previdenciário, do primeiro contato ao acompanhamento.</p>
           <div style="display:flex;gap:50px;margin-top:34px;">
-            <sc-for list="{{ expertise }}" as="e" hint-placeholder-count="2">
-              <div style="display:flex;align-items:center;gap:14px;">
-                <div style="width:44px;height:44px;border-radius:50%;background:#efe9dc;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:18px;">{{ e.icon }}</div>
-                <div style="font-size:15px;font-weight:500;color:#4a453d;line-height:1.3;">{{ e.label }}</div>
-              </div>
-            </sc-for>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#efe9dc;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:18px;">▤</div>
+              <div style="font-size:15px;font-weight:500;color:#4a453d;line-height:1.3;">Benefícios do INSS</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#efe9dc;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:18px;">☑</div>
+              <div style="font-size:15px;font-weight:500;color:#4a453d;line-height:1.3;">Planejamento Previdenciário</div>
+            </div>
           </div>
         </div>
       </div>
@@ -100,12 +99,18 @@
     <div style="max-width:1300px;margin:60px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;">
       <div>
         <div style="display:flex;gap:26px;">
-          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
-            <div style="flex:1;aspect-ratio:1/1;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-              <div style="font-size:34px;font-weight:700;color:#4a453d;line-height:1;">{{ s.value }}</div>
-              <div style="font-size:13px;color:#8a8478;margin-top:8px;line-height:1.3;">{{ s.label }}</div>
-            </div>
-          </sc-for>
+          <div style="flex:1;aspect-ratio:1/1;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-size:34px;font-weight:700;color:#4a453d;line-height:1;">[X]+</div>
+            <div style="font-size:13px;color:#8a8478;margin-top:8px;line-height:1.3;">Anos de experiência</div>
+          </div>
+          <div style="flex:1;aspect-ratio:1/1;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-size:34px;font-weight:700;color:#4a453d;line-height:1;">[X]+</div>
+            <div style="font-size:13px;color:#8a8478;margin-top:8px;line-height:1.3;">Casos atendidos</div>
+          </div>
+          <div style="flex:1;aspect-ratio:1/1;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-size:34px;font-weight:700;color:#4a453d;line-height:1;">[X]</div>
+            <div style="font-size:13px;color:#8a8478;margin-top:8px;line-height:1.3;">Estados atendidos</div>
+          </div>
         </div>
         <a href="#equipe" style="display:flex;align-items:center;justify-content:space-between;border:1.5px solid #ddd3ba;border-radius:40px;padding:14px 14px 14px 34px;margin-top:34px;color:#4a453d;font-size:16px;font-weight:400;">
           Conheça a nossa equipe
@@ -133,25 +138,81 @@
     </div>
 
     <div style="max-width:1360px;margin:50px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:26px;">
-      <sc-for list="{{ team }}" as="m" hint-placeholder-count="5">
-        <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
-          <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
-            <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
-          </div>
-          <div style="background:#33302b;padding:16px 18px;">
-            <div style="display:flex;align-items:center;justify-content:space-between;">
-              <div style="font-family:'Poppins',serif;font-weight:500;font-size:17px;color:#e9e2d4;">{{ m.name }}</div>
-              <span style="color:#c1ad78;font-size:15px;">✔</span>
-            </div>
-            <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">{{ m.role }}</div>
-            <div style="display:flex;gap:9px;margin-top:14px;">
-              <sc-for list="{{ m.socials }}" as="ic" hint-placeholder-count="4">
-                <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">{{ ic }}</div>
-              </sc-for>
-            </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
+        <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
+        </div>
+        <div style="background:#33302b;padding:16px 18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-weight:500;font-size:17px;color:#e9e2d4;">Dr(a). [Nome]</div><span style="color:#c1ad78;font-size:15px;">✔</span></div>
+          <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">Advogado(a) Previdenciarista</div>
+          <div style="display:flex;gap:9px;margin-top:14px;">
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">f</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">t</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">◎</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">▶</div>
           </div>
         </div>
-      </sc-for>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
+        <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
+        </div>
+        <div style="background:#33302b;padding:16px 18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-weight:500;font-size:17px;color:#e9e2d4;">Dr(a). [Nome]</div><span style="color:#c1ad78;font-size:15px;">✔</span></div>
+          <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">Advogado(a) Previdenciarista</div>
+          <div style="display:flex;gap:9px;margin-top:14px;">
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">f</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">t</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">◎</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">▶</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
+        <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
+        </div>
+        <div style="background:#33302b;padding:16px 18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-weight:500;font-size:17px;color:#e9e2d4;">Dr(a). [Nome]</div><span style="color:#c1ad78;font-size:15px;">✔</span></div>
+          <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">Advogado(a) Previdenciarista</div>
+          <div style="display:flex;gap:9px;margin-top:14px;">
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">f</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">t</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">◎</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">▶</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
+        <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
+        </div>
+        <div style="background:#33302b;padding:16px 18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-weight:500;font-size:17px;color:#e9e2d4;">Dr(a). [Nome]</div><span style="color:#c1ad78;font-size:15px;">✔</span></div>
+          <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">Advogado(a) Previdenciarista</div>
+          <div style="display:flex;gap:9px;margin-top:14px;">
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">f</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">t</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">◎</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">▶</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.1);">
+        <div style="position:relative;aspect-ratio:3/3.4;background:repeating-linear-gradient(135deg,#cabf9f,#cabf9f 12px,#bfb490 12px,#bfb490 24px);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:monospace;font-size:10px;color:#6f6650;background:rgba(255,255,255,.55);padding:4px 8px;border-radius:5px;">retrato</span>
+        </div>
+        <div style="background:#33302b;padding:16px 18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-weight:500;font-size:17px;color:#e9e2d4;">Dr(a). [Nome]</div><span style="color:#c1ad78;font-size:15px;">✔</span></div>
+          <div style="font-size:12.5px;color:#a49c8c;margin-top:2px;">Advogado(a) Previdenciarista</div>
+          <div style="display:flex;gap:9px;margin-top:14px;">
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">f</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">t</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">◎</div>
+            <div style="width:30px;height:30px;border-radius:50%;background:#47433c;display:flex;align-items:center;justify-content:center;color:#c1ad78;font-size:12px;">▶</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div style="display:flex;justify-content:center;gap:14px;margin-top:32px;">
       <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:15px;cursor:pointer;">‹</div>
@@ -166,12 +227,12 @@
         <div style="font-size:26px;font-weight:600;color:#c1ad78;">Atuação</div>
         <h2 style="font-size:52px;font-weight:600;line-height:1.1;color:#2f2b26;margin-top:6px;">Áreas de<br><span style="color:#c1ad78;">Atuação</span></h2>
         <div style="margin-top:46px;">
-          <sc-for list="{{ areas }}" as="a" hint-placeholder-count="6">
-            <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;">
-              <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">{{ a.icon }}</div>
-              <div style="font-size:20px;font-weight:400;color:#3a352d;">{{ a.name }}</div>
-            </div>
-          </sc-for>
+          <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;"><div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">☑</div><div style="font-size:20px;font-weight:400;color:#3a352d;">Aposentadorias</div></div>
+          <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;"><div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">▤</div><div style="font-size:20px;font-weight:400;color:#3a352d;">Planejamento Previdenciário</div></div>
+          <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;"><div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">♿</div><div style="font-size:20px;font-weight:400;color:#3a352d;">Benefícios por Incapacidade</div></div>
+          <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;"><div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">☺</div><div style="font-size:20px;font-weight:400;color:#3a352d;">BPC / LOAS</div></div>
+          <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;"><div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">♡</div><div style="font-size:20px;font-weight:400;color:#3a352d;">Pensão por Morte</div></div>
+          <div style="display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid #ece7dc;"><div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd3ba;display:flex;align-items:center;justify-content:center;color:#b3a06b;font-size:17px;flex-shrink:0;">⟳</div><div style="font-size:20px;font-weight:400;color:#3a352d;">Revisão de Benefícios</div></div>
         </div>
       </div>
       <div style="position:relative;aspect-ratio:1/1.15;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 55% 45%,#eef1f0,transparent 72%);">
@@ -189,9 +250,11 @@
       </div>
       <div style="text-align:center;">
         <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
-          <sc-for list="{{ avatars }}" as="av" hint-placeholder-count="5">
-            <div style="width:{{ av.size }};height:{{ av.size }};border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
-          </sc-for>
+          <div style="width:48px;height:48px;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
+          <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
+          <div style="width:74px;height:74px;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
+          <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
+          <div style="width:48px;height:48px;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#d8d0c0,#d8d0c0 6px,#cbc2af 6px,#cbc2af 12px);"></div>
         </div>
         <div style="font-size:20px;font-weight:600;color:#2f2b26;margin-top:20px;">Nome do Cliente</div>
         <div style="font-size:14px;color:#9a9284;margin-top:2px;">via Google</div>
@@ -245,21 +308,23 @@
       </div>
       <div>
         <div style="font-size:16px;font-weight:600;color:#e9e2d4;margin-bottom:22px;">Menu</div>
-        <sc-for list="{{ colMenu }}" as="l" hint-placeholder-count="4">
-          <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">{{ l }}</a>
-        </sc-for>
+        <a href="#sobre" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Sobre</a>
+        <a href="#equipe" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Equipe</a>
+        <a href="#servicos" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Áreas de atuação</a>
+        <a href="#contato" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Contato</a>
       </div>
       <div>
         <div style="font-size:16px;font-weight:600;color:#e9e2d4;margin-bottom:22px;">Informações</div>
-        <sc-for list="{{ colHelp }}" as="l" hint-placeholder-count="3">
-          <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">{{ l }}</a>
-        </sc-for>
+        <a href="#contato" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Fale conosco</a>
+        <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Política de Privacidade</a>
+        <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Termos de Uso</a>
       </div>
       <div>
         <div style="font-size:16px;font-weight:600;color:#e9e2d4;margin-bottom:22px;">Atuação</div>
-        <sc-for list="{{ colRes }}" as="l" hint-placeholder-count="4">
-          <a href="#" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">{{ l }}</a>
-        </sc-for>
+        <a href="#servicos" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Aposentadorias</a>
+        <a href="#servicos" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Benefícios por Incapacidade</a>
+        <a href="#servicos" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">BPC / LOAS</a>
+        <a href="#servicos" style="display:block;font-size:14px;color:#a49c8c;margin-bottom:16px;">Pensão por Morte</a>
       </div>
     </div>
     <div style="max-width:1300px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
@@ -274,44 +339,5 @@
   </footer>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      expertise: [
-        { icon: "▤", label: "Benefícios do INSS" },
-        { icon: "☑", label: "Planejamento Previdenciário" },
-      ],
-      stats: [
-        { value: "[X]+", label: "Anos de experiência" },
-        { value: "[X]+", label: "Casos atendidos" },
-        { value: "[X]", label: "Estados atendidos" },
-      ],
-      team: [
-        { name: "Dr(a). [Nome]", role: "Advogado(a) Previdenciarista", socials: ["f", "t", "◎", "▶"] },
-        { name: "Dr(a). [Nome]", role: "Advogado(a) Previdenciarista", socials: ["f", "t", "◎", "▶"] },
-        { name: "Dr(a). [Nome]", role: "Advogado(a) Previdenciarista", socials: ["f", "t", "◎", "▶"] },
-        { name: "Dr(a). [Nome]", role: "Advogado(a) Previdenciarista", socials: ["f", "t", "◎", "▶"] },
-        { name: "Dr(a). [Nome]", role: "Advogado(a) Previdenciarista", socials: ["f", "t", "◎", "▶"] },
-      ],
-      areas: [
-        { icon: "☑", name: "Aposentadorias" },
-        { icon: "▤", name: "Planejamento Previdenciário" },
-        { icon: "♿", name: "Benefícios por Incapacidade" },
-        { icon: "☺", name: "BPC / LOAS" },
-        { icon: "♡", name: "Pensão por Morte" },
-        { icon: "⟳", name: "Revisão de Benefícios" },
-      ],
-      avatars: [
-        { size: "48px" }, { size: "56px" }, { size: "74px" }, { size: "56px" }, { size: "48px" },
-      ],
-      colMenu: ["Sobre", "Equipe", "Áreas de atuação", "Contato"],
-      colHelp: ["Fale conosco", "Política de Privacidade", "Termos de Uso"],
-      colRes: ["Aposentadorias", "Benefícios por Incapacidade", "BPC / LOAS", "Pensão por Morte"],
-    };
-  }
-}
-</script>
 </body>
 </html>

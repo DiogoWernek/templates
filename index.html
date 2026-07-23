@@ -3,11 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Advocacia Previdenciária</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Mulish:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
@@ -17,8 +13,12 @@
   a{color:#e9b676;text-decoration:none}
   a:hover{color:#f2cd98}
   ::selection{background:#e9b676;color:#191310}
+  summary{list-style:none;cursor:pointer}
+  summary::-webkit-details-marker{display:none}
+  details[open] .faq-arrow{transform:rotate(180deg)}
 </style>
-</helmet>
+</head>
+<body>
 <div style="background:#191310;overflow:hidden;">
 
   <!-- ============ HERO ============ -->
@@ -298,17 +298,26 @@
         <p style="font-size:15px;line-height:1.55;color:#a89a8c;margin-top:18px;">Confira as perguntas mais frequentes<br>e tire suas dúvidas.</p>
       </div>
       <div>
-        <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="5">
-          <div style="border-bottom:1px solid rgba(255,255,255,.09);">
-            <button onClick="{{ item.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:transparent;border:none;cursor:pointer;padding:26px 0;text-align:left;">
-              <span style="font-family:'Lora',serif;font-size:22px;color:#f0e9df;">{{ item.q }}</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9bcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transition:transform .25s;transform:rotate({{ item.rot }});"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div style="overflow:hidden;max-height:{{ item.max }};transition:max-height .3s ease;">
-              <p style="font-size:15px;line-height:1.65;color:#a89a8c;padding-bottom:26px;padding-right:40px;">{{ item.a }}</p>
-            </div>
-          </div>
-        </sc-for>
+        <details style="border-bottom:1px solid rgba(255,255,255,.09);">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;"><span style="font-family:'Lora',serif;font-size:22px;color:#f0e9df;">01. Como saber se tenho direito a um benefício do INSS?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9bcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transition:transform .25s;"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p style="font-size:15px;line-height:1.65;color:#a89a8c;padding-bottom:26px;padding-right:40px;">O direito a um benefício depende de fatores como tempo de contribuição, idade e a situação específica de cada pessoa. Na análise inicial, avaliamos o seu histórico previdenciário para indicar quais caminhos podem existir para o seu caso.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(255,255,255,.09);">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;"><span style="font-family:'Lora',serif;font-size:22px;color:#f0e9df;">02. Meu benefício foi negado. O que posso fazer?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9bcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transition:transform .25s;"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p style="font-size:15px;line-height:1.65;color:#a89a8c;padding-bottom:26px;padding-right:40px;">Um indeferimento não significa o fim do processo. É possível analisar o motivo da negativa, verificar pendências no CNIS e avaliar os próximos passos, seja um novo requerimento, recurso administrativo ou a via judicial, conforme cada situação.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(255,255,255,.09);">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;"><span style="font-family:'Lora',serif;font-size:22px;color:#f0e9df;">03. Quais documentos preciso para analisar meu caso?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9bcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transition:transform .25s;"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p style="font-size:15px;line-height:1.65;color:#a89a8c;padding-bottom:26px;padding-right:40px;">Em geral, ajudam documentos como CNIS/extrato do INSS, carteira de trabalho, comprovantes de contribuição e documentos pessoais. Na análise, indicamos exatamente o que é necessário de acordo com o seu caso.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(255,255,255,.09);">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;"><span style="font-family:'Lora',serif;font-size:22px;color:#f0e9df;">04. O atendimento pode ser realizado online?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9bcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transition:transform .25s;"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p style="font-size:15px;line-height:1.65;color:#a89a8c;padding-bottom:26px;padding-right:40px;">Sim. O atendimento pode ser feito à distância, com envio de documentos e orientações pela internet, permitindo acompanhar o caso onde quer que você esteja.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(255,255,255,.09);">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;"><span style="font-family:'Lora',serif;font-size:22px;color:#f0e9df;">05. Como funciona a primeira análise do caso?</span><svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9bcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transition:transform .25s;"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <p style="font-size:15px;line-height:1.65;color:#a89a8c;padding-bottom:26px;padding-right:40px;">Você conta brevemente a sua situação e envia as informações iniciais. A partir disso, o caso e os documentos disponíveis são avaliados individualmente e você recebe orientações sobre os caminhos possíveis.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -342,32 +351,5 @@
   </footer>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { open: null };
-  get data() {
-    return [
-      { q: "01. Como saber se tenho direito a um benefício do INSS?", a: "O direito a um benefício depende de fatores como tempo de contribuição, idade e a situação específica de cada pessoa. Na análise inicial, avaliamos o seu histórico previdenciário para indicar quais caminhos podem existir para o seu caso." },
-      { q: "02. Meu benefício foi negado. O que posso fazer?", a: "Um indeferimento não significa o fim do processo. É possível analisar o motivo da negativa, verificar pendências no CNIS e avaliar os próximos passos, seja um novo requerimento, recurso administrativo ou a via judicial, conforme cada situação." },
-      { q: "03. Quais documentos preciso para analisar meu caso?", a: "Em geral, ajudam documentos como CNIS/extrato do INSS, carteira de trabalho, comprovantes de contribuição e documentos pessoais. Na análise, indicamos exatamente o que é necessário de acordo com o seu caso." },
-      { q: "04. O atendimento pode ser realizado online?", a: "Sim. O atendimento pode ser feito à distância, com envio de documentos e orientações pela internet, permitindo acompanhar o caso onde quer que você esteja." },
-      { q: "05. Como funciona a primeira análise do caso?", a: "Você conta brevemente a sua situação e envia as informações iniciais. A partir disso, o caso e os documentos disponíveis são avaliados individualmente e você recebe orientações sobre os caminhos possíveis." },
-    ];
-  }
-  renderVals() {
-    const open = this.state.open;
-    return {
-      faqs: this.data.map((f, i) => ({
-        q: f.q,
-        a: f.a,
-        rot: open === i ? "180deg" : "0deg",
-        max: open === i ? "260px" : "0px",
-        toggle: () => this.setState(s => ({ open: s.open === i ? null : i })),
-      })),
-    };
-  }
-}
-</script>
 </body>
 </html>
