@@ -25,6 +25,30 @@
   .faq-item[open] .faq-q{color:#17120e}
   .faq-item[open] .faq-ar{color:#17120e;transform:rotate(180deg)}
   .faq-item[open] .faq-a{color:#3d2e15}
+
+  @media (max-width:1100px){
+    div[style*="grid-template-columns:repeat(3"],section[style*="grid-template-columns:repeat(3"],
+    div[style*="grid-template-columns:repeat(4"],section[style*="grid-template-columns:repeat(4"],
+    div[style*="grid-template-columns:repeat(5"],section[style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media (max-width:860px){
+    section,footer{padding-left:20px!important;padding-right:20px!important}
+    div[style*="grid-template-columns:repeat("],section[style*="grid-template-columns:repeat("],
+    div[style*="grid-template-columns:0"],section[style*="grid-template-columns:0"],
+    div[style*="grid-template-columns:1fr 1fr"],section[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;gap:18px!important}
+    [style*="grid-column:span 2"]{grid-column:span 1!important}
+    h1{font-size:clamp(30px,8vw,44px)!important}
+    h2{font-size:clamp(24px,5.5vw,32px)!important}
+    h3{font-size:clamp(19px,4vw,24px)!important}
+    h4{font-size:clamp(17px,3.5vw,20px)!important}
+    [style*="min-height:660px"]{min-height:auto!important}
+    nav{flex-wrap:wrap!important}
+    div[style*="justify-content:space-between"]{flex-wrap:wrap!important}
+    .r-navlinks{display:none!important}
+  }
+  @media (max-width:520px){
+    h1{font-size:clamp(26px,9vw,36px)!important}
+  }
 </style>
 </head>
 <body>
@@ -39,7 +63,7 @@
     <!-- nav -->
     <div style="position:relative;z-index:5;max-width:1320px;margin:0 auto;padding:34px 56px 0;display:flex;align-items:center;justify-content:space-between;">
       <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:19px;line-height:1.05;letter-spacing:.5px;color:#f4f0ea;">NOME &amp;<br>SÓCIOS</div>
-      <nav style="display:flex;align-items:center;gap:44px;font-size:13.5px;font-weight:600;letter-spacing:1.2px;color:#e9e2d7;">
+      <nav class="r-navlinks" style="display:flex;align-items:center;gap:44px;font-size:13.5px;font-weight:600;letter-spacing:1.2px;color:#e9e2d7;">
         <a href="#home" style="color:#f4f0ea;border-bottom:2px solid #c8944a;padding-bottom:5px;">INÍCIO</a>
         <a href="#about" style="color:#e9e2d7;">SOBRE</a>
         <a href="#services" style="color:#e9e2d7;">ATUAÇÃO</a>
